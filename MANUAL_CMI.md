@@ -1,6 +1,6 @@
 # Manual del Proyecto Cuadro de Mando Integral (CMI-DAC)
 
-> 📊 **Manual Completo v2.5** - Documentación exhaustiva del Cuadro de Mando Integral para LegalIntermedia SL
+> 📊 **Manual Completo v2.5** - Documentación exhaustiva del Cuadro de Mando Integral para División de Agentes Consultores S.L.
 > Última actualización: Febrero 2026
 
 ---
@@ -15,7 +15,8 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 
 ## 📚 Índice General
 
-### [1. Introducción y Contexto Estratégico](docs/manual/secciones/01_Introduccion_Contexto.md)
+### [1. Introducción y Contexto Estratégico](docs/manual/secciones/01_Introduccion.md)
+
 - 1.1. ¿Qué es el CMI-DAC?
 - 1.2. Problema de Negocio que Resuelve
 - 1.3. Audiencia Objetivo del Manual
@@ -26,6 +27,7 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 - 1.8. Cómo Leer Este Manual
 
 ### [2. Acceso y Requisitos de Sistema](docs/manual/secciones/02_Acceso_Requisitos.md)
+
 - 2.1. URL de Acceso y Credenciales
 - 2.2. Requisitos Técnicos (Hardware, Software, Red)
 - 2.3. Compatibilidad con Navegadores y Dispositivos
@@ -36,6 +38,7 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 - 2.8. Política de Uso Aceptable
 
 ### [3. Guía de Navegación e Interfaz](docs/manual/secciones/03_Navegacion_Interfaz.md)
+
 - 3.1. Mapa Conceptual del Dashboard
 - 3.2. Tour Visual: Anatomía de una Página
 - 3.3. Navegación entre Páginas
@@ -48,6 +51,7 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 - 3.10. Atajos de Teclado y Trucos de Productividad
 
 ### [4. Diccionario de Indicadores (KPIs)](docs/manual/secciones/04_Diccionario_KPIs.md)
+
 - 4.1. Marco Conceptual: Balanced Scorecard (BSC)
 - 4.2. Perspectiva Financiera (6 KPIs)
 - 4.3. Perspectiva del Cliente (5 KPIs)
@@ -58,6 +62,7 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 - 4.8. Matriz de Priorización de KPIs
 
 ### [5. Escenarios de Uso (Casos Prácticos)](docs/manual/secciones/05_Escenarios_Uso.md)
+
 - 5.1. Caso Práctico #1: Análisis de Cierre Mensual
 - 5.2. Caso Práctico #2: Evaluación de Desempeño Individual
 - 5.3. Caso Práctico #3: Análisis de Rentabilidad por Zona
@@ -69,6 +74,7 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 - 5.9. Workflows para Cada Rol (CEO, Director, Agente)
 
 ### [6. Arquitectura Técnica y Mantenimiento](docs/manual/secciones/06_Arquitectura_Mantenimiento.md)
+
 - 6.1. Infraestructura Cloud y Base de Datos
 - 6.2. Arquitectura de Datos y Flujo de Información
 - 6.3. Modelo de Base de Datos y Esquema (Star Schema)
@@ -88,6 +94,7 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 - 6.17. Documentación para Desarrolladores
 
 ### [7. Glosario de Términos y Preguntas Frecuentes (FAQ)](docs/manual/secciones/07_Glosario_FAQ.md)
+
 - 7.1. Glosario de Conceptos Clave
 - 7.2. Preguntas Frecuentes Ampliadas (FAQ)
   - Sobre los Datos y Actualización
@@ -105,6 +112,7 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 - 7.8. Agradecimientos y Créditos
 
 ### [8. Casos de Éxito y Testimonios](docs/manual/secciones/08_Casos_Exito_Testimonios.md)
+
 - 8.1. Métricas Globales de Impacto
 - 8.2. Caso de Éxito #1: Oficina Norte - Transformación en 90 Días
 - 8.3. Caso de Éxito #2: Agente "Rescatada" - De Bottom 3 a Top 5
@@ -119,6 +127,7 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 - 8.12. Tu Historia Puede Estar Aquí
 
 ### [9. Roadmap y Evolución Futura](docs/manual/secciones/09_Roadmap_Evolucion.md)
+
 - 9.1. Filosofía de Evolución Continua
 - 9.2. Versión Actual y Releases Históricos
 - 9.3. Roadmap 2026: Próximos 12 Meses
@@ -139,6 +148,7 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 - 9.14. Invitación a Co-Crear el Futuro
 
 ### [10. Integración con Otros Sistemas](docs/manual/secciones/10_Integracion_Sistemas.md)
+
 - 10.1. Filosofía de Integración
 - 10.2. Integraciones Actuales (Production)
   - CRM Inmobiliario
@@ -171,7 +181,7 @@ Este manual documenta de forma integral el **CMI-DAC** (Cuadro de Mando Integral
 
 Si es tu primera vez con el CMI-DAC:
 
-1. 📖 **Lee primero**: [Sección 1 - Introducción](docs/manual/secciones/01_Introduccion_Contexto.md)
+1. 📖 **Lee primero**: [Sección 1 - Introducción](docs/manual/secciones/01_Introduccion.md)
 2. 🔑 **Accede al sistema**: [Sección 2 - Acceso y Requisitos](docs/manual/secciones/02_Acceso_Requisitos.md)
 3. 🧭 **Aprende a navegar**: [Sección 3 - Navegación e Interfaz](docs/manual/secciones/03_Navegacion_Interfaz.md)
 4. 📊 **Comprende los KPIs**: [Sección 4 - Diccionario de KPIs](docs/manual/secciones/04_Diccionario_KPIs.md)
@@ -182,33 +192,43 @@ Si es tu primera vez con el CMI-DAC:
 ## 📋 Resumen Ejecutivo de Cada Sección
 
 ### 1. Introducción y Contexto Estratégico
-Define qué es el CMI-DAC, por qué existe y cómo transforma la toma de decisiones en LegalIntermedia SL. Explica la filosofía "data-driven" y los beneficios medibles obtenidos en el primer año.
+
+Define qué es el CMI-DAC, por qué existe y cómo transforma la toma de decisiones en División de Agentes Consultores S.L. Explica la filosofía "data-driven" y los beneficios medibles obtenidos en el primer año.
 
 ### 2. Acceso y Requisitos de Sistema
+
 Guía técnica para acceder al dashboard, requisitos de hardware/software, configuración de seguridad (SSO, RLS) y proceso de alta de usuarios.
 
 ### 3. Guía de Navegación e Interfaz
+
 Tour visual completo del dashboard: anatomía de páginas, sistema de filtros, interactividad avanzada, exportación de datos y uso móvil.
 
 ### 4. Diccionario de Indicadores (KPIs)
+
 Referencia completa de los 20 KPIs distribuidos en las 4 perspectivas del Balanced Scorecard, con fórmulas, interpretación y umbrales.
 
 ### 5. Escenarios de Uso (Casos Prácticos)
+
 Guías paso a paso para situaciones reales: análisis de cierre mensual, evaluación de desempeño, detección de inmuebles zombi, comparativas temporales, etc.
 
 ### 6. Arquitectura Técnica y Mantenimiento
+
 Documentación técnica completa: infraestructura cloud, modelo de datos, pipeline ETL, backups, seguridad, monitoreo y comandos de mantenimiento. **Destinado a IT.**
 
 ### 7. Glosario de Términos y FAQ
+
 Diccionario de conceptos técnicos e inmobiliarios, más de 40 preguntas frecuentes resueltas, errores comunes y directorio de soporte.
 
 ### 8. Casos de Éxito y Testimonios
+
 Historias reales de éxito tras implementar el CMI: métricas de impacto, testimonios por rol, análisis de ROI (592%) y reconocimientos externos.
 
 ### 9. Roadmap y Evolución Futura
+
 Hoja de ruta estratégica 2026-2030: features planificadas, experimentos en beta, tecnologías emergentes, y cómo influir en el desarrollo del producto.
 
 ### 10. Integración con Otros Sistemas
+
 Arquitectura de integraciones: CRM, ERP, Microsoft 365, portales inmobiliarios, APIs públicas, gestión de errores y solicitud de nuevas integraciones.
 
 ---
@@ -219,8 +239,10 @@ Arquitectura de integraciones: CRM, ERP, Microsoft 365, portales inmobiliarios, 
 
 - [Anexo I: Diccionario de Datos Detallado](docs/anexos/Diccionario_Datos.md)
 - [Anexo II: Guía de Despliegue en Digital Ocean](docs/anexos/Guia_Despliegue.md)
-- [Anexo III: Estructura de Directorios del Repositorio](docs/anexos/Estructura_Directorios.md)
-- [Anexo IV: Guía de Elaboración de Manuales](docs/complementos/GUIA_ELABORACION_MANUALES.md)
+- [Anexo III: Manual Básico de Power BI](docs/anexos/Manual_PowerBI.md)
+- [Anexo IV: Pantalla Interactiva Samsung 65"](docs/anexos/Pantalla_Tactil.md)
+- [Anexo V: Infraestructura NAS y SAI](docs/anexos/Infraestructura_NAS_SAI.md)
+- [Guía de Elaboración de Manuales](docs/complementos/GUIA_ELABORACION_MANUALES.md)
 
 ### Documentación Gráfica
 
@@ -238,12 +260,12 @@ El repositorio incluye scripts Python para ETL, mantenimiento y verificación de
 
 | Tipo de Consulta | Contacto | Horario | Tiempo Respuesta |
 |------------------|----------|---------|------------------|
-| **Acceso / Credenciales** | it@legalintermedia.com | L-V 9-18h | 2-4 horas |
-| **Cálculo de KPIs** | bi@posiciona.com | L-V 9-14h | 24 horas |
-| **Estrategia / Objetivos** | comercial@legalintermedia.com | L-V 10-18h | 48 horas |
-| **Propuestas de Mejora** | bi@posiciona.com | Flexible | 2 semanas |
+| **Acceso / Credenciales** | <it@dac-sl.es> | L-V 9-18h | 2-4 horas |
+| **Cálculo de KPIs** | <bi@tposiciona.es> | L-V 9-14h | 24 horas |
+| **Estrategia / Objetivos** | <comercial@dac-sl.es> | L-V 10-18h | 48 horas |
+| **Propuestas de Mejora** | <bi@tposiciona.es> | Flexible | 2 semanas |
 | **Emergencia (sistema caído)** | Guardia 24/7 | 24/7 | Inmediato |
-| **Formación personalizada** | rrhh@legalintermedia.com | L-V 9-14h | 1 semana |
+| **Formación personalizada** | <rrhh@dac-sl.es> | L-V 9-14h | 1 semana |
 
 ---
 
@@ -277,7 +299,7 @@ El repositorio incluye scripts Python para ETL, mantenimiento y verificación de
 
 Este manual es un documento vivo. Si detectas errores, tienes sugerencias de mejora o casos de uso adicionales que documentar:
 
-1. **Erratas y correcciones**: Email a bi@posiciona.com con referencia a la sección y línea
+1. **Erratas y correcciones**: Email a <bi@tposiciona.es> con referencia a la sección y línea
 2. **Nuevos casos de uso**: Completa el [formulario de sugerencias](link-interno-sharepoint)
 3. **Contribuciones técnicas**: Pull requests en el repositorio GitHub (solo equipo IT)
 
@@ -287,15 +309,17 @@ Este manual es un documento vivo. Si detectas errores, tienes sugerencias de mej
 
 ## 🏆 Créditos
 
-**Autor principal**: Equipo BI de T*Posiciona en colaboración con LegalIntermedia SL
+**Autor principal**: Equipo BI de T*Posiciona en colaboración con División de Agentes Consultores S.L.
 
 **Colaboradores**:
-- Equipo de Dirección de LegalIntermedia (definición estratégica)
+
+- Equipo de Dirección de División de Agentes Consultores (definición estratégica)
 - Usuarios beta (feedback y casos de uso reales)
 - Equipo IT (documentación técnica)
 - Diseñadores UX (diagramas y visualizaciones)
 
 **Herramientas utilizadas**:
+
 - Markdown + Mermaid (diagramas)
 - Power BI + PostgreSQL (implementación)
 - GitHub (control de versiones)
@@ -304,9 +328,9 @@ Este manual es un documento vivo. Si detectas errores, tienes sugerencias de mej
 
 ## 📜 Licencia y Derechos de Uso
 
-© 2025-2026 LegalIntermedia SL y T*Posiciona. Todos los derechos reservados.
+© 2025-2026 División de Agentes Consultores S.L. y T*Posiciona. Todos los derechos reservados.
 
-Este manual es **confidencial** y de uso exclusivo interno para empleados y colaboradores autorizados de LegalIntermedia SL. Queda prohibida su distribución, reproducción o uso fuera de la organización sin autorización expresa por escrito.
+Este manual es **confidencial** y de uso exclusivo interno para empleados y colaboradores autorizados de División de Agentes Consultores S.L. Queda prohibida su distribución, reproducción o uso fuera de la organización sin autorización expresa por escrito.
 
 **Clasificación de seguridad**: Confidencial - Uso Interno
 
@@ -325,4 +349,4 @@ Este manual no es solo documentación técnica. Es una guía para construir una 
 ---
 
 *Última actualización: 15 de febrero de 2026*
-*Manual CMI-DAC v2.5 - LegalIntermedia SL*
+*Manual CMI-DAC v2.5 - División de Agentes Consultores S.L.*

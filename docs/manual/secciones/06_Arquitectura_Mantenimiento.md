@@ -20,6 +20,8 @@ Se ha seleccionado **PostgreSQL 15** como motor de base de datos. A diferencia d
 
 La infraestructura física ha sido migrada desde servidores locales a la nube de **Digital Ocean**, proporcionando ventajas estratégicas críticas:
 
+![Servidor Cloud](../../graficos/cloud_server_mockup.png)
+
 | Característica | Servidor Local (Antiguo) ❌ | Servidor Cloud (Actual) ✅ | Ventaja para el Negocio |
 | :--- | :--- | :--- | :--- |
 | **Disponibilidad** | Depende de la luz/internet de la oficina. | **99.99% SLA**. Siempre online. | El CEO puede consultar datos un domingo o desde el extranjero. |
@@ -41,6 +43,8 @@ Para conectar Power BI (en los PCs de la oficina) con la Nube, se establece un *
 ## 6.2. Arquitectura de Datos y Flujo de Información
 
 El siguiente diagrama ilustra cómo viajan los datos desde el origen hasta el cuadro de mando:
+
+![Proceso ETL](../../graficos/etl_process_mockup.png)
 
 ```mermaid
 graph TD
@@ -81,6 +85,8 @@ La base de datos `cmi_realty` utiliza un enfoque híbrido para equilibrar rendim
 
 ### 📊 Diagrama del Modelo de Datos (Star Schema)
 
+![Esquema de Modelo](../../graficos/powerbi_model_schema.png)
+
 ```mermaid
 erDiagram
     FACT_OPERACIONES ||--|| DIM_CALENDARIO : fecha
@@ -105,6 +111,8 @@ erDiagram
         string tipo
     }
 ```
+
+![Digital Twin](../../graficos/digital_twin_building_mockup.png)
 
 *(Para el detalle campo por campo, consultar el [Anexo I: Diccionario de Datos](../anexos/Diccionario_Datos.md))*
 
@@ -147,6 +155,8 @@ El administrador debe supervisar mensualmente los siguientes indicadores técnic
 ---
 
 ## 6.6. Estrategia de Respaldo Híbrida (Nube + NAS Corporativo)
+
+![NAS Backup](../../graficos/nas_backup_3d_mockup.png)
 
 *(Contenido previo expandido con mayor profundidad en el protocolo WORM y pruebas de estrés de restauración)*
 
@@ -208,7 +218,7 @@ El manual y el código que sustenta el CMI-DAC se gestionan mediante **Git**.
 ### 📚 Tecnologías Core
 
 | Capa | Tecnología | Versión | Justificación |
-|------|------------|---------|---------------|
+| :--- | :--- | :--- | :--- |
 | **Frontend BI** | Microsoft Power BI | Service + Desktop 2.125+ | Estándar de industria, integración nativa con Azure |
 | **Backend ETL** | Python | 3.11+ | Flexibilidad, bibliotecas ricas (pandas, sqlalchemy) |
 | **Base de Datos** | PostgreSQL | 15.x | Open source, robusto, funciones analíticas avanzadas |
@@ -278,10 +288,9 @@ graph LR
 ### 📜 Ejemplo de Log con Error
 
 ```log
-[2026-02-15 05:00:02] INFO: Iniciando ETL Pipeline v2.3.1
 [2026-02-15 05:00:03] ERROR: Archivo operaciones.csv no encontrado
 [2026-02-15 05:00:03] INFO: Abortando pipeline para evitar corrupción de datos
-[2026-02-15 05:00:04] INFO: 🔔 Alerta enviada a admin@legalintermedia.com
+[2026-02-15 05:00:04] INFO: 🔔 Alerta enviada a it@dac-sl.es
 [2026-02-15 05:00:05] ERROR: ❌ Pipeline FALLIDO. Manual intervention required
 ```
 
@@ -348,14 +357,14 @@ SELECT count(*) FROM pg_stat_activity;
 
 El sistema implementa la regla de oro del backup:
 
-- **3** copias de los datos
-- **2** medios diferentes (nube + físico)
-- **1** copia offsite (fuera de las instalaciones)
+* **3** copias de los datos
+* **2** medios diferentes (nube + físico)
+* **1** copia offsite (fuera de las instalaciones)
 
 ### 📅 Calendario de Backups
 
 | Tipo | Frecuencia | Retención | Ubicación | Automatizado |
-|------|------------|-----------|-----------|--------------|
+| :--- | :--- | :--- | :--- | :--- |
 | **Incremental** | Cada 6 horas | 48 horas | Digital Ocean Spaces | ✅ Sí |
 | **Completo (BD)** | Diario 02:00 AM | 30 días | Servidor + NAS Corporativo | ✅ Sí |
 | **Completo (Sistema)** | Semanal (Domingos) | 12 semanas | Digital Ocean Snapshots | ✅ Sí |
@@ -406,7 +415,7 @@ python scripts/verify_data_integrity.py
 El administrador debe revisar diariamente:
 
 | Métrica | Umbral Verde | Umbral Amarillo | Umbral Rojo |
-|---------|--------------|-----------------|-------------|
+| :--- | :--- | :--- | :--- |
 | **Uso CPU** | < 60% | 60-80% | > 80% |
 | **Uso RAM** | < 70% | 70-85% | > 85% |
 | **Uso Disco** | < 75% | 75-90% | > 90% |
@@ -446,16 +455,16 @@ alerts:
 
 ### 🔐 Checklist de Seguridad Implementado
 
-- [x] Firewall configurado (solo puertos 22, 80, 443, 5432 abiertos)
-- [x] SSH con autenticación por llave (password deshabilitado)
-- [x] Fail2ban activo (bloqueo tras 3 intentos fallidos)
-- [x] Certificados SSL con renovación automática (Let's Encrypt)
-- [x] PostgreSQL con SSL obligatorio
-- [x] Credenciales en variables de entorno (nunca en código)
-- [x] Logs de auditoría activados (todas las conexiones BD)
-- [x] Actualizaciones de seguridad automáticas (unattended-upgrades)
-- [x] Backups encriptados (AES-256)
-- [x] 2FA obligatorio para todos los usuarios de Power BI
+* [x] Firewall configurado (solo puertos 22, 80, 443, 5432 abiertos)
+* [x] SSH con autenticación por llave (password deshabilitado)
+* [x] Fail2ban activo (bloqueo tras 3 intentos fallidos)
+* [x] Certificados SSL con renovación automática (Let's Encrypt)
+* [x] PostgreSQL con SSL obligatorio
+* [x] Credenciales en variables de entorno (nunca en código)
+* [x] Logs de auditoría activados (todas las conexiones BD)
+* [x] Actualizaciones de seguridad automáticas (unattended-upgrades)
+* [x] Backups encriptados (AES-256)
+* [x] 2FA obligatorio para todos los usuarios de Power BI
 
 ### 🛡️ Política de Contraseñas
 
@@ -505,7 +514,9 @@ graph TD
 
 ## 6.17. Documentación para Desarrolladores
 
-### 📁 Estructura del Repositorio
+### 📁 Estructura del Repositorio y Lógica DAX
+
+![Lógica DAX](../../graficos/powerbi_dax_formula.png)
 
 ```
 CMI-DAC/

@@ -24,4 +24,10 @@ Este documento registra las acciones realizadas dentro del proyecto de documenta
 | **B-14** | 2026-02-14 | Creación de Anexo III: Manual de Power BI. | Completado | ✅ | Agente Documentalista | Guía básica para usuario final sobre interfaz, filtros y exportación de datos. |
 | **B-15** | 2026-02-14 | Creación de Anexo IV: Pantalla Interactiva. | Completado | ✅ | Agente Documentalista | Guía de uso de la pantalla Samsung Flip 65" para reuniones estratégicas y visualización de dashboards. |
 | **B-16** | 2026-02-14 | Eliminación de Anexo Técnico (Directorios). | Completado | ✅ | Agente Documentalista | Se ha eliminado el anexo de estructura de carpetas para mantener el manual enfocado en el usuario de negocio. |
-|  |  |  |  |  | [ ] |  |  |
+| **B-17** | 2026-02-15 | Revisión integral y corrección de enlaces. | Completado | ✅ | Antigravity AI | Corrección de enlaces rotos y creación de archivos en `docs/graficos/`. |
+| **B-18** | 2026-02-15 | Generación de Mockups Gráficos Premium. | Completado | ✅ | Antigravity AI | Creación de 3 imágenes adicionales (Móvil, Mapa, Agentes) e integración. |
+| **B-19** | 2026-02-15 | Expansión Técnica Power BI (Visual + DAX). | Completado | ✅ | Antigravity AI | Generación de 3 mockups técnicos e integración. |
+| **B-20** | 2026-02-15 | Expansión Masiva de Gráficos e Infraestructura. | Completado | ✅ | Antigravity AI | Generación de 4 nuevos modelos e integración total. |
+| **B-21** | 2026-02-15 | Visualización de Vanguardia (Minority Report). | Completado | ✅ | Antigravity AI | Creación de 3 interfaces holográficas futuristas. |
+| **B-22** | 2026-02-15 | Expansión Tecnológica y de Seguridad 3D. | Completado | ✅ | Antigravity AI | Generación de 6 mockups avanzados (AR, Gemelos Digitales, Ciberseguridad, NAS, Teams) e integración masiva. |
+| **B-23** | 2026-02-15 | Actualización de Identidad Corporativa. | Completado | ✅ | Antigravity AI | Reemplazo masivo de "Legal Intermedia" por "División de Agentes Consultores" y corrección de emails (T*Posiciona). |

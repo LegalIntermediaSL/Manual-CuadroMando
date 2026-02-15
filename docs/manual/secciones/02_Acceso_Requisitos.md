@@ -9,6 +9,8 @@ El Cuadro de Mando Integral (CMI-DAC) es una solución profesional alojada en **
 
 > 🔒 **Importante**: La gestión de la contraseña es responsabilidad del Administrador de Sistemas. En caso de olvido o necesidad de restablecimiento, contacte inmediatamente con IT. **Nunca comparta estas credenciales por email o mensajería instantánea.**
 
+![Ciberseguridad](../../graficos/cybersecurity_mockup.png)
+
 ## 2.1. Plataformas de Acceso
 
 El CMI-DAC es accesible desde tres entornos diferentes, optimizados para distintos casos de uso:
@@ -27,11 +29,13 @@ Ideal para directivos o agentes que necesitan consultar un dato rápido antes de
 * **Aplicación**: Descargue "Microsoft Power BI" desde App Store (iOS) o Google Play (Android).
 * **Ventaja**: Permite configurar **Alertas Automáticas**. Si un KPI (ej. Ventas del día) alcanza un umbral, recibirá una notificación en su móvil.
 
+![Vista Móvil](../../graficos/mobile_mockup.png)
+
 ---
 
 ## 2.2. Política de Seguridad y Privacidad (RGPD)
 
-La información contenida en el CMI-DAC es **Estrictamente Confidencial** y propiedad de **LegalIntermedia SL**. El acceso está regulado bajo los siguientes principios:
+La información contenida en el CMI-DAC es **Estrictamente Confidencial** y propiedad de **División de Agentes Consultores S.L.** El acceso está regulado bajo los siguientes principios:
 
 ### 🗝️ Autenticación de Doble Factor (MFA)
 
@@ -137,6 +141,7 @@ Para garantizar la mejor experiencia posible al usar el CMI-DAC, siga estas reco
 La aplicación móvil ofrece características específicas que no están disponibles en el navegador web:
 
 **Ventajas exclusivas:**
+
 * **Modo Offline**: Consulta los últimos datos descargados sin conexión
 * **Notificaciones Push**: Alertas instantáneas cuando un KPI supera umbrales
 * **Escaneo de Códigos QR**: Acceso rápido a dashboards compartidos
@@ -144,6 +149,7 @@ La aplicación móvil ofrece características específicas que no están disponi
 * **Autenticación Biométrica**: Face ID / Touch ID para acceso rápido y seguro
 
 **Descargas:**
+
 * [iOS App Store](https://apps.apple.com/app/microsoft-power-bi/id929738808)
 * [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.powerbim)
 
@@ -156,30 +162,35 @@ El sistema implementa un modelo de permisos granular basado en **roles y atribut
 ### 🎭 Roles Predefinidos
 
 #### 1. **Administrador Global**
+
 * **Acceso**: Total sin restricciones
 * **Capacidades**: Ver, editar, exportar, gestionar usuarios
 * **Asignado a**: CTO, Director de Sistemas
 * **Seguridad RLS**: Deshabilitada (ve todos los datos)
 
 #### 2. **Dirección Ejecutiva**
+
 * **Acceso**: Lectura completa, exportación limitada
 * **Capacidades**: Ver todas las oficinas y agentes, exportar reportes
 * **Asignado a**: CEO, CFO, Director Comercial
 * **Seguridad RLS**: Ve todos los datos operativos
 
 #### 3. **Jefe de Equipo / Oficina**
+
 * **Acceso**: Lectura de su oficina/equipo, sin exportación masiva
 * **Capacidades**: Ver su equipo, comparativas con media general
 * **Asignado a**: Responsables de oficina, coordinadores
 * **Seguridad RLS**: Filtrado por `dim_agentes[oficina] = USER_OFFICE`
 
 #### 4. **Agente Comercial**
+
 * **Acceso**: Solo sus propios datos y promedios anónimos
 * **Capacidades**: Ver su rendimiento, comparar con media
 * **Asignado a**: Agentes, captadores, comerciales
 * **Seguridad RLS**: Filtrado por `dim_agentes[email] = USERPRINCIPALNAME()`
 
 #### 5. **Solo Lectura (Auditor)**
+
 * **Acceso**: Lectura sin capacidad de filtrado o exportación
 * **Capacidades**: Ver dashboards predefinidos estáticos
 * **Asignado a**: Auditores externos, consultores temporales
@@ -208,6 +219,7 @@ Power BI permite configurar alertas automáticas sobre KPIs críticos:
 ### 📬 Tipos de Alertas Disponibles
 
 #### Alerta de Umbral
+
 **Ejemplo**: "Avisarme cuando el GCI mensual supere €100,000"
 
 ```
@@ -220,6 +232,7 @@ Configuración:
 ```
 
 #### Alerta de Tendencia
+
 **Ejemplo**: "Avisarme si las captaciones bajan 3 semanas consecutivas"
 
 ```
@@ -232,6 +245,7 @@ Configuración:
 ```
 
 #### Alerta de Anomalía
+
 **Ejemplo**: "Avisarme si hay un cambio inesperado > 20% en cualquier KPI"
 
 ```
@@ -261,6 +275,7 @@ Configuración:
 #### Problema 1: "No puedo ver ningún dato, todo aparece en blanco"
 
 **Diagnóstico**:
+
 ```
 Posibles causas:
 1. Row-Level Security está bloqueando tus datos
@@ -269,6 +284,7 @@ Posibles causas:
 ```
 
 **Solución**:
+
 1. Verificar con administrador que tu rol esté correctamente asignado
 2. Presionar el botón "Reset all filters" (🗑️) en la barra superior
 3. Cerrar sesión y volver a entrar (Ctrl + F5 para limpiar caché)
@@ -277,6 +293,7 @@ Posibles causas:
 #### Problema 2: "Los gráficos cargan muy lento (>30 segundos)"
 
 **Diagnóstico**:
+
 ```
 Posibles causas:
 1. Conexión a internet lenta o inestable
@@ -286,6 +303,7 @@ Posibles causas:
 ```
 
 **Solución**:
+
 1. Verificar velocidad de conexión (mínimo 10 Mbps requerido)
 2. Reducir rango de fechas con filtro temporal
 3. Cerrar pestañas innecesarias del navegador
@@ -294,11 +312,13 @@ Posibles causas:
 #### Problema 3: "Recibo error de autenticación cada hora"
 
 **Diagnóstico**:
+
 ```
 Causa: Token de sesión expirando prematuramente
 ```
 
 **Solución**:
+
 1. Verificar que MFA esté correctamente configurado
 2. Limpiar cookies y caché del navegador
 3. Re-autenticar en portal.office.com primero
@@ -307,6 +327,7 @@ Causa: Token de sesión expirando prematuramente
 #### Problema 4: "Los números no coinciden con mi reporte manual"
 
 **Diagnóstico**:
+
 ```
 Posibles causas:
 1. Diferente definición de fechas (natural vs. fiscal)
@@ -316,6 +337,7 @@ Posibles causas:
 ```
 
 **Solución**:
+
 1. Verificar en "Applied Filters" qué filtros están activos
 2. Comparar definiciones: ¿usas fecha de cierre o de firma?
 3. Esperar a la actualización nocturna (5 AM) para datos frescos
@@ -344,7 +366,7 @@ Cualquier persona cuyos datos estén en el sistema puede ejercer:
 * **Cancelación**: Solicitar eliminación (derecho al olvido)
 * **Oposición**: Negarse a ciertos tratamientos
 
-**Procedimiento**: Enviar solicitud formal a <dpo@legalintermedia.com>
+**Procedimiento**: Enviar solicitud formal a <dpo@dac-sl.es>
 
 ### 🛡️ Medidas de Seguridad Técnicas
 
@@ -373,16 +395,16 @@ graph TD
 
 Si es tu primera vez accediendo al CMI-DAC, sigue esta lista:
 
-- [ ] **Paso 1**: Verificar que tienes credenciales corporativas (@cuningcc.onmicrosoft.com)
-- [ ] **Paso 2**: Activar MFA (Multi-Factor Authentication) en tu cuenta Microsoft 365
-- [ ] **Paso 3**: Descargar Power BI Desktop (solo si eres administrador)
-- [ ] **Paso 4**: Acceder a app.powerbi.com y localizar el workspace "CMI-DAC"
-- [ ] **Paso 5**: Verificar que ves datos (si está todo en blanco, contactar IT)
-- [ ] **Paso 6**: Configurar 2-3 alertas personales en tus KPIs críticos
-- [ ] **Paso 7**: Guardar un bookmark personal con tus filtros habituales
-- [ ] **Paso 8**: Instalar la app móvil y verificar que sincroniza
-- [ ] **Paso 9**: Revisar esta sección del manual completa (al menos 1 vez)
-- [ ] **Paso 10**: Realizar la formación inicial (webinar mensual o video grabado)
+* [ ] **Paso 1**: Verificar que tienes credenciales corporativas (@cuningcc.onmicrosoft.com)
+* [ ] **Paso 2**: Activar MFA (Multi-Factor Authentication) en tu cuenta Microsoft 365
+* [ ] **Paso 3**: Descargar Power BI Desktop (solo si eres administrador)
+* [ ] **Paso 4**: Acceder a app.powerbi.com y localizar el workspace "CMI-DAC"
+* [ ] **Paso 5**: Verificar que ves datos (si está todo en blanco, contactar IT)
+* [ ] **Paso 6**: Configurar 2-3 alertas personales en tus KPIs críticos
+* [ ] **Paso 7**: Guardar un bookmark personal con tus filtros habituales
+* [ ] **Paso 8**: Instalar la app móvil y verificar que sincroniza
+* [ ] **Paso 9**: Revisar esta sección del manual completa (al menos 1 vez)
+* [ ] **Paso 10**: Realizar la formación inicial (webinar mensual o video grabado)
 
 ---
 

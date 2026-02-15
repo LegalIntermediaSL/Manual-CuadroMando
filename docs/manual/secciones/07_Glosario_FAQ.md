@@ -73,26 +73,28 @@ Este capítulo sirve como referencia rápida para resolver dudas terminológicas
 #### ❓ ¿Por qué no coinciden mis datos de Power BI con mi Excel personal?
 
 **Respuesta**: Hay varias razones posibles:
+
 1. **Timing**: Tu Excel puede tener datos de hoy, Power BI solo tiene hasta ayer 23:59
 2. **Filtros ocultos**: Verifica que no tengas filtros activos en Power BI
 3. **Definiciones diferentes**: Power BI usa definiciones estandarizadas (ej. fecha de cierre notarial), tu Excel puede usar fecha de firma de arras
 4. **Datos no validados**: Power BI filtra operaciones que no pasan validaciones de calidad
 5. **Row-Level Security**: Puede que no tengas permiso para ver todos los datos
 
-**Solución**: Si la diferencia es >5%, reporta a <bi@posiciona.com> con screenshots de ambos sistemas.
+**Solución**: Si la diferencia es >5%, reporta a <bi@tposiciona.es> con screenshots de ambos sistemas.
 
 #### ❓ ¿Puedo modificar los datos directamente en Power BI?
 
 **Respuesta**: **No**. Power BI es una herramienta de **visualización**, no de edición. Los datos se modifican en:
-- **CRM**: Para cambios en contactos, agentes, estados de operaciones
-- **Base de Datos** (solo administradores): Para correcciones masivas
-- **Archivos fuente CSV** (solo con autorización): Para importaciones históricas
+* **CRM**: Para cambios en contactos, agentes, estados de operaciones
+* **Base de Datos** (solo administradores): Para correcciones masivas
+* **Archivos fuente CSV** (solo con autorización): Para importaciones históricas
 
 Cualquier cambio en las fuentes se reflejará automáticamente en el próximo refresco nocturno.
 
 #### ❓ ¿Qué significa "Data source error" en los gráficos?
 
 **Respuesta**: Significa que Power BI no puede conectarse a la base de datos PostgreSQL. Causas comunes:
+
 1. **Backup nocturno en curso** (entre 02:00-02:15 AM): Espera 5 minutos
 2. **Servidor en mantenimiento**: Verifica en el canal de Slack #it-status
 3. **Tu IP cambió** (si trabajas en remoto): Solicita a IT que añada tu nueva IP al firewall
@@ -107,15 +109,16 @@ Cualquier cambio en las fuentes se reflejará automáticamente en el próximo re
 #### ❓ No veo los datos de otros agentes, ¿es normal?
 
 **Respuesta**: **Sí**, si tu rol es "Agente". El sistema implementa Row-Level Security (RLS) que te muestra:
-- Tus propios datos completos
-- Promedios anónimos del equipo (para que te compares)
-- **No** verás datos individuales de compañeros (privacidad)
+* Tus propios datos completos
+* Promedios anónimos del equipo (para que te compares)
+* **No** verás datos individuales de compañeros (privacidad)
 
 Si crees que deberías tener más acceso (ej. fuiste promovido a jefe de equipo), solicita cambio de rol a RRHH.
 
 #### ❓ ¿Puedo compartir mi contraseña con mi asistente?
 
 **Respuesta**: **NO. Absolutamente prohibido**. Es una violación de seguridad grave. Si tu asistente necesita acceso:
+
 1. Solicitar a IT una cuenta dedicada con permisos apropiados
 2. El proceso toma 24h y es gratuito
 3. Compartir credenciales puede resultar en suspensión de acceso
@@ -123,10 +126,11 @@ Si crees que deberías tener más acceso (ej. fuiste promovido a jefe de equipo)
 #### ❓ Olvidé mi contraseña, ¿qué hago?
 
 **Respuesta**:
+
 1. Ir a portal.office.com
 2. Clic en "¿Olvidaste tu contraseña?"
 3. Seguir proceso de recuperación (requiere MFA activo)
-4. Si no tienes MFA o no recibes el código, contacta IT: <it@legalintermedia.com>
+4. Si no tienes MFA o no recibes el código, contacta IT: <it@dac-sl.es>
 
 **Tiempo de resolución**: Autoservicio: 5 min | Con IT: 2-4 horas
 
@@ -137,6 +141,7 @@ Si crees que deberías tener más acceso (ej. fuiste promovido a jefe de equipo)
 #### ❓ ¿Qué significa si un KPI aparece en "Rojo"?
 
 **Respuesta**: Significa que el valor actual está **por debajo del 80% del objetivo** marcado. Es una señal de alerta que requiere:
+
 1. Identificar la causa raíz (ver drill-down)
 2. Discutir en la próxima reunión de equipo
 3. Definir acciones correctivas
@@ -146,23 +151,24 @@ Si crees que deberías tener más acceso (ej. fuiste promovido a jefe de equipo)
 #### ❓ ¿Quién define los "objetivos" de los KPIs?
 
 **Respuesta**:
-- **KPIs estratégicos** (GCI, NOI, YoY): Definidos por CEO + CFO en plan anual
-- **KPIs tácticos** (captaciones, conversión): Definidos por Director Comercial trimestralmente
-- **KPIs operativos** (visitas, llamadas): Definidos por Jefes de Equipo mensualmente
+* **KPIs estratégicos** (GCI, NOI, YoY): Definidos por CEO + CFO en plan anual
+* **KPIs tácticos** (captaciones, conversión): Definidos por Director Comercial trimestralmente
+* **KPIs operativos** (visitas, llamadas): Definidos por Jefes de Equipo mensualmente
 
 Los objetivos se revisan y ajustan trimestralmente en función de la realidad del mercado.
 
 #### ❓ ¿Por qué mi "Productividad" es baja si cerré muchas ventas?
 
 **Respuesta**: La productividad no mide solo **cantidad** sino también **calidad**:
-- 10 ventas de €1,000 comisión = €10,000 GCI
-- 2 ventas de €8,000 comisión = €16,000 GCI
+* 10 ventas de €1,000 comisión = €10,000 GCI
+* 2 ventas de €8,000 comisión = €16,000 GCI
 
 El segundo agente tiene mayor productividad aunque cerró menos operaciones. El KPI valora **eficiencia** (máximo GCI con mínimo esfuerzo).
 
 #### ❓ ¿Cómo sé si estoy en el "Top 10" de mi oficina?
 
 **Respuesta**:
+
 1. Ir a página "Análisis de Agentes"
 2. Filtrar por tu oficina
 3. Ver tabla "Ranking de Productividad"
@@ -177,6 +183,7 @@ También recibirás un email mensual automático si estás en el Top 3 o Bottom 
 #### ❓ ¿Por qué los gráficos cargan tan lento?
 
 **Respuesta**: Causas comunes:
+
 1. **Conexión lenta**: Verifica tu velocidad (mínimo 10 Mbps requerido)
 2. **Demasiados filtros**: Simplifica la consulta
 3. **Muchas pestañas abiertas**: Cierra pestañas innecesarias (Power BI consume RAM)
@@ -187,9 +194,9 @@ También recibirás un email mensual automático si estás en el Top 3 o Bottom 
 #### ❓ Los colores del dashboard han cambiado, ¿qué pasó?
 
 **Respuesta**: Probablemente el administrador actualizó el **tema visual** por:
-- Mejora de accesibilidad (contraste para daltónicos)
-- Rebranding corporativo
-- Optimización de legibilidad en proyectores
+* Mejora de accesibilidad (contraste para daltónicos)
+* Rebranding corporativo
+* Optimización de legibilidad en proyectores
 
 Los colores no afectan a los datos. Si dificulta tu trabajo, reporta a UX team.
 
@@ -200,6 +207,7 @@ Los colores no afectan a los datos. Si dificulta tu trabajo, reporta a UX team.
 #### ❓ ¿Qué hago si hago clic en algo y se rompe todo?
 
 **Respuesta**: **No te preocupes**, los clics en Power BI son reversibles:
+
 1. Presiona `Esc` para deseleccionar
 2. Usa el botón "Restablecer filtros" (🗑️) en la barra superior
 3. Recarga la página con `F5`
@@ -213,15 +221,16 @@ Los colores no afectan a los datos. Si dificulta tu trabajo, reporta a UX team.
 #### ❓ ¿Puedo descargar todos los datos a Excel?
 
 **Respuesta**:
-- **Sí, pero con límites**: Máximo 150,000 filas por exportación
-- **Requiere permisos**: Roles "Dirección" o "Admin" pueden exportar masivamente
-- **Uso controlado**: Exportaciones >500 registros se auditan automáticamente
+* **Sí, pero con límites**: Máximo 150,000 filas por exportación
+* **Requiere permisos**: Roles "Dirección" o "Admin" pueden exportar masivamente
+* **Uso controlado**: Exportaciones >500 registros se auditan automáticamente
 
 **Método**: Clic derecho en tabla → "Exportar datos" → Elegir formato
 
 #### ❓ ¿Cómo envío un gráfico a un compañero por email?
 
 **Respuesta**:
+
 1. Hacer clic en el visual específico
 2. Clic en "..." (más opciones) arriba a la derecha del gráfico
 3. "Exportar datos" o "Exportar visual" (genera PNG)
@@ -231,10 +240,10 @@ Los colores no afectan a los datos. Si dificulta tu trabajo, reporta a UX team.
 
 #### ❓ ¿Puedo publicar los datos del CMI en redes sociales?
 
-**Respuesta**: **NO**. Los datos del CMI-DAC son **confidenciales** y propiedad de LegalIntermedia SL. Compartir datos fuera de la organización sin autorización escrita constituye:
-- Violación de contrato
-- Incumplimiento RGPD
-- Posibles acciones legales
+**Respuesta**: **NO**. Los datos del CMI-DAC son **confidenciales** y propiedad de División de Agentes Consultores S.L. Compartir datos fuera de la organización sin autorización escrita constituye:
+* Violación de contrato
+* Incumplimiento RGPD
+* Posibles acciones legales
 
 Si necesitas datos para presentación pública (ej. conferencia), solicita autorización a Dirección.
 
@@ -245,6 +254,7 @@ Si necesitas datos para presentación pública (ej. conferencia), solicita autor
 #### ❓ El mapa de calor no se visualiza, solo veo gris
 
 **Respuesta**: El mapa usa **Bing Maps API**:
+
 1. Verifica conexión a internet
 2. Desactiva VPN (puede bloquear geolocalización)
 3. Permite geolocalización en configuración del navegador
@@ -253,6 +263,7 @@ Si necesitas datos para presentación pública (ej. conferencia), solicita autor
 #### ❓ Recibo error "Insufficient memory" al abrir Power BI
 
 **Respuesta**: Tu PC no tiene suficiente RAM disponible:
+
 1. Cierra aplicaciones pesadas (Chrome con 50 pestañas, Photoshop, etc.)
 2. Reinicia el navegador
 3. Si persiste, considera usar la app móvil (más ligera) o solicitar actualización de hardware
@@ -260,8 +271,8 @@ Si necesitas datos para presentación pública (ej. conferencia), solicita autor
 #### ❓ Los datos muestran "(Blank)" en algunos gráficos
 
 **Respuesta**: "(Blank)" significa que ese campo está **realmente vacío** en la base de datos:
-- **Causa legítima**: Operaciones antiguas (antes de 2020) tienen datos incompletos
-- **Causa errónea**: Falta rellenar campos obligatorios en el CRM
+* **Causa legítima**: Operaciones antiguas (antes de 2020) tienen datos incompletos
+* **Causa errónea**: Falta rellenar campos obligatorios en el CRM
 
 **Acción**: Si es operación reciente (< 6 meses), reporta a Calidad de Datos.
 
@@ -272,37 +283,38 @@ Si necesitas datos para presentación pública (ej. conferencia), solicita autor
 #### ❓ ¿Tengo que revisar el CMI todos los días?
 
 **Respuesta**: Depende de tu rol:
-- **CEO/Dirección**: Vistazo diario 5 min + revisión semanal profunda 30 min
-- **Jefes de Equipo**: Diaria 10-15 min
-- **Agentes**: Semanal 10 min (autoevaluación)
+* **CEO/Dirección**: Vistazo diario 5 min + revisión semanal profunda 30 min
+* **Jefes de Equipo**: Diaria 10-15 min
+* **Agentes**: Semanal 10 min (autoevaluación)
 
 **No es obligatorio**, pero usar el CMI regularmente correlaciona con +25% mejora en resultados.
 
 #### ❓ ¿Puedo proponer nuevos KPIs?
 
 **Respuesta**: **¡Sí, por favor!** El CMI es una herramienta viva. Proceso:
-1. Enviar propuesta a <bi@posiciona.com> con:
-   - Nombre del KPI
-   - Qué problema de negocio resuelve
-   - Cómo se calcularía
-   - Qué decisiones permitiría tomar
+
+1. Enviar propuesta a <bi@tposiciona.es> con:
+   * Nombre del KPI
+   * Qué problema de negocio resuelve
+   * Cómo se calcularía
+   * Qué decisiones permitiría tomar
 2. Evaluación por Comité de BI (2 semanas)
 3. Si aprueba, desarrollo e implementación (4-6 semanas)
 
 **KPIs aceptados recientemente** (gracias a propuestas de usuarios):
-- "Tiempo medio de respuesta a lead" (propuesto por Mar, jefa de equipo)
-- "% de inmuebles con tour virtual" (propuesto por IT team)
+* "Tiempo medio de respuesta a lead" (propuesto por Mar, jefa de equipo)
+* "% de inmuebles con tour virtual" (propuesto por IT team)
 
 #### ❓ ¿El CMI reemplaza las reuniones 1-on-1 con mi jefe?
 
 **Respuesta**: **No**, las complementa. El CMI proporciona:
-- **Los datos objetivos** (qué está pasando)
-- **El contexto cuantitativo** (comparativa con equipo)
+* **Los datos objetivos** (qué está pasando)
+* **El contexto cuantitativo** (comparativa con equipo)
 
 Pero las reuniones 1-on-1 aportan:
-- **El "por qué"**: Contexto cualitativo, situaciones personales
-- **El "cómo mejorar"**: Coaching, formación, apoyo
-- **El "qué sientes"**: Motivación, satisfacción, preocupaciones
+* **El "por qué"**: Contexto cualitativo, situaciones personales
+* **El "cómo mejorar"**: Coaching, formación, apoyo
+* **El "qué sientes"**: Motivación, satisfacción, preocupaciones
 
 **Combinación ideal**: Datos (CMI) + Humanidad (Conversación) = Mejora sostenible
 
@@ -363,12 +375,12 @@ Si tras consultar este manual sigue teniendo dudas, contacte según tipo de prob
 
 | Tipo de Problema | Contacto | Horario | Tiempo Respuesta |
 |------------------|----------|---------|------------------|
-| **Acceso / Credenciales** | <it@legalintermedia.com> | L-V 9-18h | 2-4 horas |
-| **Cálculo de KPIs** | <bi@posiciona.com> | L-V 9-14h | 24 horas |
-| **Estrategia / Objetivos** | <comercial@legalintermedia.com> | L-V 10-18h | 48 horas |
-| **Propuestas de Mejora** | <bi@posiciona.com> | Flexible | 2 semanas |
+| **Acceso / Credenciales** | <it@dac-sl.es> | L-V 9-18h | 2-4 horas |
+| **Cálculo de KPIs** | <bi@tposiciona.es> | L-V 9-14h | 24 horas |
+| **Estrategia / Objetivos** | <comercial@dac-sl.es> | L-V 10-18h | 48 horas |
+| **Propuestas de Mejora** | <bi@tposiciona.es> | Flexible | 2 semanas |
 | **Emergencia (sistema caído)** | +34 XXX XXX XXX (guardia 24/7) | 24/7 | Inmediato |
-| **Formación personalizada** | <rrhh@legalintermedia.com> | L-V 9-14h | 1 semana |
+| **Formación personalizada** | <rrhh@dac-sl.es> | L-V 9-14h | 1 semana |
 
 ### 📞 Protocolo de Escalado
 
@@ -415,9 +427,9 @@ graph TD
 Este manual ha sido posible gracias a:
 
 * **Equipo de T*Posiciona**: Diseño técnico y consultoría estratégica
-* **LegalIntermedia SL**: Provisión de casos de uso reales y feedback continuo
+* **División de Agentes Consultores S.L.**: Provisión de casos de uso reales y feedback continuo
 * **Usuarios Beta**: María G., Carlos R., Ana M. (testing y sugerencias)
 * **Comunidad Power BI**: Por bibliotecas de código abierto y best practices
 
-**Mantenido por**: Equipo BI de T*Posiciona | <bi@posiciona.com>
+**Mantenido por**: Equipo BI de T*Posiciona | <bi@tposiciona.es>
 **Contribuciones**: Acepted via Pull Request en GitHub (repo privado)

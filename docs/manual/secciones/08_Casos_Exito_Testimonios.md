@@ -28,6 +28,7 @@ Desde la implementación del CMI-DAC en abril de 2025, la organización ha exper
 ### 📍 Contexto
 
 **Situación Inicial (Enero 2025)**:
+
 - Oficina con 8 agentes, rendimiento por debajo de la media nacional
 - GCI Q4 2024: €145,000 (objetivo: €220,000) → **34% bajo objetivo**
 - Moral baja, 2 agentes top considerando irse a la competencia
@@ -36,6 +37,7 @@ Desde la implementación del CMI-DAC en abril de 2025, la organización ha exper
 ### 🎯 Intervención con CMI-DAC
 
 **Fase 1: Diagnóstico (Semana 1-2)**
+
 ```
 Usando el CMI, se identificó:
 - Problema NO era falta de captaciones (18/mes, bueno)
@@ -44,12 +46,14 @@ Usando el CMI, se identificó:
 ```
 
 **Fase 2: Acción Correctiva (Semana 3-8)**
+
 1. Auditoría de precios con CMI como referencia
 2. Ajuste de -8% en 15 inmuebles "zombi"
 3. Formación en valoración técnica (uso de CMA del CMI)
 4. Reuniones semanales revisando KPIs en pantalla grande
 
 **Fase 3: Consolidación (Semana 9-12)**
+
 - Implementación de alertas automáticas (DOM >75 días)
 - Gamificación: Ranking semanal visible en pantalla de oficina
 - Incentivo especial para agentes que reduzcan su DOM personal
@@ -76,6 +80,7 @@ Usando el CMI, se identificó:
 ### 👤 Perfil: Laura Martínez, Agente Comercial
 
 **Situación Inicial (Mayo 2025)**:
+
 - 3 años en la empresa
 - Rendimiento en caída: Bottom 3 de 15 agentes
 - GCI Q1: €18,000 (media oficina: €42,000)
@@ -129,10 +134,12 @@ pero falla en el cierre y capta en zonas de bajo valor.
 
 **Contexto (Julio 2025)**:
 El CEO tenía que decidir entre:
+
 - **Opción A**: Abrir nueva oficina en Zona Sur (inversión €120k)
 - **Opción B**: Reforzar marketing en oficinas existentes (€60k)
 
 **Análisis Tradicional** (sin CMI):
+
 - Zona Sur tiene "mucho potencial"
 - Competencia "parece débil"
 - "Sensación" de mercado caliente
@@ -169,6 +176,7 @@ graph TD
 ### 🎯 Decisión Final
 
 **Opción B seleccionada**: Invertir €60k en:
+
 - Marketing digital agresivo (+€30k)
 - Contratación de 2 agentes para oficinas existentes (+€30k)
 
@@ -183,7 +191,7 @@ graph TD
 
 > "Iba a abrir la oficina en Zona Sur porque 'me lo pedía el cuerpo'. El CMI me mostró datos duros: esa zona tenía DOM altísimo y ticket bajo. Habríamos perdido dinero. En vez de eso, reforzamos donde ya éramos fuertes. Un año después, esa decisión nos ahorró €60k de inversión y generó €284k adicionales. **El CMI nos salvó de un error de €300,000**."
 >
-> — **Antonio García**, CEO LegalIntermedia SL
+> — **Antonio García**, CEO División de Agentes Consultores S.L.
 
 ---
 
@@ -293,6 +301,7 @@ El proyecto CMI-DAC ha recibido reconocimiento en la industria:
 ### 💰 Análisis Financiero Completo
 
 **Inversión Total (Año 1)**:
+
 ```
 Desarrollo e implementación:     €45,000
 Licencias Power BI Pro (15):     €9,900
@@ -304,6 +313,7 @@ TOTAL INVERSIÓN:                 €80,900
 ```
 
 **Beneficios Medibles (Año 1)**:
+
 ```
 Incremento GCI (+23%):                    +€397,000
 Reducción costes operativos (-18%):       +€42,000
@@ -325,6 +335,7 @@ TOTAL BENEFICIOS:                         €560,000
 > 📹 **Nota**: Los testimonios en video de usuarios reales están disponibles en la intranet corporativa: [Sharepoint > CMI > Testimonios](link-interno)
 
 **Videos Destacados**:
+
 1. "De la Intuición al Dato" - CEO Antonio García (5 min)
 2. "Cómo el CMI Salvó Mi Carrera" - Laura Martínez (3 min)
 3. "ROI en 90 Días" - Miguel Fernández, Dir. Oficina Norte (4 min)
@@ -334,7 +345,7 @@ TOTAL BENEFICIOS:                         €560,000
 
 ## 8.11. Carta de Agradecimiento de la Dirección
 
-> A todo el equipo de LegalIntermedia:
+> A todo el equipo de División de Agentes Consultores:
 >
 > Hace 18 meses, tomamos la decisión de invertir en el proyecto CMI-DAC. No era una decisión fácil: requería inversión, cambio de hábitos y, sobre todo, **transparencia radical**.
 >
@@ -349,7 +360,7 @@ TOTAL BENEFICIOS:                         €560,000
 > Sigamos construyendo juntos.
 >
 > **Antonio García**
-> CEO, LegalIntermedia SL
+> CEO, División de Agentes Consultores S.L.
 > Febrero 2026
 
 ---
@@ -358,7 +369,7 @@ TOTAL BENEFICIOS:                         €560,000
 
 ¿Has tenido un éxito notable usando el CMI-DAC? ¿Una decisión crítica que tomaste basándote en los datos del dashboard?
 
-**Comparte tu historia**: <bi@posiciona.com>
+**Comparte tu historia**: <bi@tposiciona.es>
 
 Las mejores historias se incluirán en futuras versiones de este manual (con tu autorización) y podrían presentarse en conferencias del sector.
 

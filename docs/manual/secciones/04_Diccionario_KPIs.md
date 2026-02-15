@@ -6,18 +6,18 @@ Este apartado define en detalle los 20 indicadores clave de desempeño (KPIs) se
 
 ```mermaid
 graph TD
-    Nivel1[👑 KPIs Estratégicos<br/>(CEO/Dirección)]
-    Nivel2[📈 KPIs Tácticos<br/>(Jefes de Equipo)]
-    Nivel3[⚙️ KPIs Operativos<br/>(Agentes)]
+    Nivel1["👑 KPIs Estratégicos (CEO/Dirección)"]
+    Nivel2["📈 KPIs Tácticos (Jefes de Equipo)"]
+    Nivel3["⚙️ KPIs Operativos (Agentes)"]
 
-    Nivel1 --> GCI[Ingresos GCI]
-    Nivel1 --> NOI[Rentabilidad Neta]
+    Nivel1 --> GCI["Ingresos GCI"]
+    Nivel1 --> NOI["Rentabilidad Neta"]
     
-    Nivel2 --> Captacion[Tasa de Captación]
-    Nivel2 --> DOM[Días en Mercado]
+    Nivel2 --> Captacion["Tasa de Captación"]
+    Nivel2 --> DOM["Días en Mercado"]
     
-    Nivel3 --> Visitas[Nº Visitas]
-    Nivel3 --> Llamadas[Llamadas Realizadas]
+    Nivel3 --> Visitas["Nº Visitas"]
+    Nivel3 --> Llamadas["Llamadas Realizadas"]
 
     style Nivel1 fill:#ffcc80,stroke:#e65100
     style Nivel2 fill:#fff59d,stroke:#fbc02d
@@ -395,19 +395,19 @@ Los KPIs no existen en silos. Entender sus relaciones causa-efecto es fundamenta
 
 ```mermaid
 graph TD
-    CAP[Tasa de Captación<br/>CLI-04-NLV] -->|+3 meses| DOM[Días en Mercado<br/>PRO-01-DOM]
-    DOM -->|Reduce| GCI[Ingresos GCI<br/>FIN-01-GCI]
+    CAP["Tasa de Captación (CLI-04-NLV)"] -->|+3 meses| DOM["Días en Mercado (PRO-01-DOM)"]
+    DOM -->|Reduce| GCI["Ingresos GCI (FIN-01-GCI)"]
 
-    FORM[Inversión Formación<br/>CAP-05-TRA] -->|Mejora| PPA[Productividad Agente<br/>CAP-01-PPA]
+    FORM["Inversión Formación (CAP-05-TRA)"] -->|Mejora| PPA["Productividad Agente (CAP-01-PPA)"]
     PPA -->|Aumenta| GCI
 
-    NPS[Satisfacción Cliente<br/>CLI-01-NPS] -->|Genera| REF[Referencias Orgánicas]
-    REF -->|Reduce| CAC[Coste Adquisición<br/>CLI-02-CAC]
+    NPS["Satisfacción Cliente (CLI-01-NPS)"] -->|Genera| REF["Referencias Orgánicas"]
+    REF -->|Reduce| CAC["Coste Adquisición (CLI-02-CAC)"]
 
-    CAC -->|Mejora| NOI[Rentabilidad<br/>FIN-02-NOI]
+    CAC -->|Mejora| NOI["Rentabilidad (FIN-02-NOI)"]
     GCI -->|Compone| NOI
 
-    EXC[% Exclusividad<br/>PRO-02-EXC] -->|Reduce| DOM
+    EXC["% Exclusividad (PRO-02-EXC)"] -->|Reduce| DOM
     EXC -->|Protege| GCI
 
     style GCI fill:#ffd54f,stroke:#f57f17,stroke-width:3px
@@ -428,9 +428,9 @@ graph TD
 
 No todas las correlaciones implican causalidad. Cuidado con:
 
-- **GCI vs. Temperatura**: Ambos suben en verano, pero no hay relación causal
-- **Agentes Nuevos vs. Ventas**: Los nuevos llegan cuando hay más trabajo, no lo generan
-- **Portales vs. Ventas**: Más portales no garantiza más ventas si el producto no es atractivo
+* **GCI vs. Temperatura**: Ambos suben en verano, pero no hay relación causal
+* **Agentes Nuevos vs. Ventas**: Los nuevos llegan cuando hay más trabajo, no lo generan
+* **Portales vs. Ventas**: Más portales no garantiza más ventas si el producto no es atractivo
 
 ---
 
@@ -457,22 +457,22 @@ Baja Impacto │ 🥱 LOW PRIORITY      │ ⚠️ MONEY PITS
 ### 📊 Estrategia Recomendada por Cuadrante
 
 **🎯 Quick Wins** (Ganancias Rápidas):
-- Enfoque: Tácticas de corto plazo
-- Ejemplo: Lanzar campaña de captación con incentivos
-- ROI: Alto e inmediato
+* Enfoque: Tácticas de corto plazo
+* Ejemplo: Lanzar campaña de captación con incentivos
+* ROI: Alto e inmediato
 
 **🏔️ Big Bets** (Apuestas Grandes):
-- Enfoque: Estrategia de largo plazo
-- Ejemplo: Transformar cultura de servicio para mejorar NPS
-- ROI: Muy alto pero diferido (6-12 meses)
+* Enfoque: Estrategia de largo plazo
+* Ejemplo: Transformar cultura de servicio para mejorar NPS
+* ROI: Muy alto pero diferido (6-12 meses)
 
 **🥱 Low Priority** (Baja Prioridad):
-- Enfoque: Mantener sin inversión adicional
-- Acción: Monitorizar pasivamente
+* Enfoque: Mantener sin inversión adicional
+* Acción: Monitorizar pasivamente
 
 **⚠️ Money Pits** (Trampas de Dinero):
-- Enfoque: No invertir recursos ahora
-- Nota: Pueden volverse importantes en otras fases
+* Enfoque: No invertir recursos ahora
+* Nota: Pueden volverse importantes en otras fases
 
 ---
 
@@ -485,6 +485,7 @@ Baja Impacto │ 🥱 LOW PRIORITY      │ ⚠️ MONEY PITS
 **Análisis superficial**: "Todo va bien, no tocar nada"
 
 **Análisis profundo**:
+
 ```
 1. Revisar Leading Indicator: Tasa de Captación
    → Si captación de DICIEMBRE fue baja (-20%)
@@ -515,19 +516,19 @@ Baja Impacto │ 🥱 LOW PRIORITY      │ ⚠️ MONEY PITS
 **Diagnóstico**: María está quemada. Alto riesgo de fuga.
 
 **Acción**:
-- Reunión 1-on-1 urgente con RRHH
-- Redistribuir carga de trabajo
-- Ofrecer días de descanso compensatorios
-- Plan de desarrollo profesional
+* Reunión 1-on-1 urgente con RRHH
+* Redistribuir carga de trabajo
+* Ofrecer días de descanso compensatorios
+* Plan de desarrollo profesional
 
 ---
 
 ### 📖 Caso 3: Optimización de Marketing
 
 **Situación**: Presupuesto de marketing €10,000/mes distribuido:
-- Idealista: €5,000
-- Facebook Ads: €3,000
-- Google Ads: €2,000
+* Idealista: €5,000
+* Facebook Ads: €3,000
+* Google Ads: €2,000
 
 **Análisis por KPI**:
 
@@ -540,6 +541,7 @@ Baja Impacto │ 🥱 LOW PRIORITY      │ ⚠️ MONEY PITS
 **Insight**: Google tiene mejor ROI pero menos volumen.
 
 **Decisión Estratégica**:
+
 ```
 Nueva distribución:
 - Idealista: €4,000 (mantener base)
@@ -557,8 +559,8 @@ Nueva distribución:
 **Problema**: Celebrar KPIs que "suenan bien" pero no impactan en el negocio.
 
 **Ejemplo**:
-- ❌ "Tenemos 10,000 seguidores en Instagram"
-- ✅ "Instagram nos generó 5 ventas (€25,000 GCI) este mes"
+* ❌ "Tenemos 10,000 seguidores en Instagram"
+* ✅ "Instagram nos generó 5 ventas (€25,000 GCI) este mes"
 
 **Regla**: Si el KPI no se conecta con GCI o NOI, es secundario.
 
@@ -569,9 +571,9 @@ Nueva distribución:
 **Problema**: Asumir que porque dos cosas ocurren juntas, una causa la otra.
 
 **Ejemplo**:
-- Observación: "Los meses con más lluvia tenemos menos ventas"
-- Conclusión errónea: "La lluvia causa menos ventas"
-- Realidad: "Los meses lluviosos (otoño) son históricamente bajos en el sector"
+* Observación: "Los meses con más lluvia tenemos menos ventas"
+* Conclusión errónea: "La lluvia causa menos ventas"
+* Realidad: "Los meses lluviosos (otoño) son históricamente bajos en el sector"
 
 **Solución**: Siempre buscar el mecanismo causal lógico.
 
@@ -582,8 +584,8 @@ Nueva distribución:
 **Problema**: Comparar periodos no equivalentes.
 
 **Ejemplo**:
-- ❌ Comparar GCI de Enero con GCI de Julio (estacionalidad)
-- ✅ Comparar GCI de Enero 2026 con Enero 2025 (YoY)
+* ❌ Comparar GCI de Enero con GCI de Julio (estacionalidad)
+* ✅ Comparar GCI de Enero 2026 con Enero 2025 (YoY)
 
 **Regla**: Siempre comparar periodos similares o usar YoY.
 
@@ -594,9 +596,9 @@ Nueva distribución:
 **Problema**: Optimizar solo para que todo esté "verde" sin cuestionar los umbrales.
 
 **Ejemplo**:
-- Umbral de DOM: <90 días = Verde
-- Realidad de mercado: Competencia está en 45 días
-- Resultado: Estamos "en verde" pero perdiendo mercado
+* Umbral de DOM: <90 días = Verde
+* Realidad de mercado: Competencia está en 45 días
+* Resultado: Estamos "en verde" pero perdiendo mercado
 
 **Solución**: Revisar umbrales semestralmente con benchmarks de sector.
 
@@ -607,14 +609,14 @@ Nueva distribución:
 **Problema**: Pasar tanto tiempo analizando datos que no queda tiempo para actuar.
 
 **Síntomas**:
-- Reuniones de 3 horas revisando todos los KPIs
-- Crear nuevos KPIs cada semana
-- Generar informes que nadie lee
+* Reuniones de 3 horas revisando todos los KPIs
+* Crear nuevos KPIs cada semana
+* Generar informes que nadie lee
 
 **Solución**: Regla del 80/20
-- El 80% del valor viene del 20% de los KPIs
-- Enfocarse en los 5 KPIs estratégicos principales
-- Límite de 30 min por reunión de revisión
+* El 80% del valor viene del 20% de los KPIs
+* Enfocarse en los 5 KPIs estratégicos principales
+* Límite de 30 min por reunión de revisión
 
 ---
 
@@ -624,52 +626,52 @@ Nueva distribución:
 
 Para: CEO, Director Comercial
 
-- [ ] GCI del día vs. objetivo diario
-- [ ] Captaciones del día
-- [ ] Alertas críticas (si las hay)
+* [ ] GCI del día vs. objetivo diario
+* [ ] Captaciones del día
+* [ ] Alertas críticas (si las hay)
 
 ### 📊 Revisión Semanal (30 minutos)
 
 Para: Jefes de Equipo
 
-- [ ] GCI semanal vs. objetivo
-- [ ] Tasa de captación
-- [ ] Funnel de conversión
-- [ ] Top 3 y Bottom 3 agentes
-- [ ] DOM de propiedades nuevas
+* [ ] GCI semanal vs. objetivo
+* [ ] Tasa de captación
+* [ ] Funnel de conversión
+* [ ] Top 3 y Bottom 3 agentes
+* [ ] DOM de propiedades nuevas
 
 ### 📈 Revisión Mensual (2 horas)
 
 Para: Dirección + Mandos Intermedios
 
-- [ ] GCI mensual vs. presupuesto
-- [ ] YoY growth
-- [ ] NPS del mes
-- [ ] Análisis de causas de desviaciones
-- [ ] Acciones correctivas definidas
-- [ ] Revisión de alertas configuradas
+* [ ] GCI mensual vs. presupuesto
+* [ ] YoY growth
+* [ ] NPS del mes
+* [ ] Análisis de causas de desviaciones
+* [ ] Acciones correctivas definidas
+* [ ] Revisión de alertas configuradas
 
 ### 🎯 Revisión Trimestral (4 horas)
 
 Para: Comité de Dirección
 
-- [ ] Cumplimiento objetivos trimestrales (4 perspectivas BSC)
-- [ ] Rentabilidad operativa (NOI)
-- [ ] Rotación de talento
-- [ ] Análisis de tendencias (3 trimestres)
-- [ ] Ajustes estratégicos
-- [ ] Revisión de umbrales de KPIs
+* [ ] Cumplimiento objetivos trimestrales (4 perspectivas BSC)
+* [ ] Rentabilidad operativa (NOI)
+* [ ] Rotación de talento
+* [ ] Análisis de tendencias (3 trimestres)
+* [ ] Ajustes estratégicos
+* [ ] Revisión de umbrales de KPIs
 
 ### 🏆 Revisión Anual (8 horas + offsite)
 
 Para: CEO + Accionistas
 
-- [ ] Balance completo del año
-- [ ] Cumplimiento plan estratégico
-- [ ] Benchmarking con competencia
-- [ ] Definición objetivos año siguiente
-- [ ] Rediseño de KPIs si es necesario
-- [ ] Presupuesto y forecasting
+* [ ] Balance completo del año
+* [ ] Cumplimiento plan estratégico
+* [ ] Benchmarking con competencia
+* [ ] Definición objetivos año siguiente
+* [ ] Rediseño de KPIs si es necesario
+* [ ] Presupuesto y forecasting
 
 ---
 

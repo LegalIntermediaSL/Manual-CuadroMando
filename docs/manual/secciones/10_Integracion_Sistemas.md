@@ -41,12 +41,14 @@ graph TD
 **Frecuencia de Sincronización**: Diaria (05:00 AM)
 
 **Datos Sincronizados**:
+
 - Contactos (leads, clientes, propietarios)
 - Inmuebles (propiedades en cartera)
 - Actividades (llamadas, visitas, emails)
 - Operaciones (ventas, alquileres)
 
 **Flujo Técnico**:
+
 ```python
 # scripts/integrations/crm_sync.py
 def sync_crm_to_cmi():
@@ -70,6 +72,7 @@ def sync_crm_to_cmi():
 ```
 
 **SLA**:
+
 - Disponibilidad: 99.5%
 - Latencia máxima: 24 horas
 - Precisión: >99% (validaciones automáticas)
@@ -83,12 +86,14 @@ def sync_crm_to_cmi():
 **Frecuencia de Sincronización**: Semanal (lunes 06:00 AM)
 
 **Datos Sincronizados**:
+
 - Facturas emitidas
 - Gastos operativos (por categoría)
 - Nóminas (solo totales, sin detalle personal)
 - Comisiones pagadas a agentes
 
 **Notas de Seguridad**:
+
 - Los datos se transfieren encriptados via SFTP
 - Los archivos CSV se borran automáticamente tras importación (retención 0 días)
 - No se sincronizan datos bancarios (cuentas, IBAN)
@@ -102,14 +107,18 @@ def sync_crm_to_cmi():
 **Frecuencia de Sincronización**: Tiempo real
 
 **Propósito**:
+
 - **Single Sign-On (SSO)**: Un solo login para CMI, email y Office
 - **Gestión de Usuarios**: Altas/bajas automáticas desde directorio corporativo
 - **Row-Level Security**: Mapeo automático de roles (agente, jefe, director)
 
 **Beneficios**:
+
 - ✅ Experiencia sin fricción (usuario no recuerda contraseñas adicionales)
 - ✅ Seguridad centralizada (MFA obligatorio en todo)
 - ✅ Offboarding automático (empleado sale → acceso revocado en minutos)
+
+![Integración Teams](../../graficos/team_collaboration_teams_mockup.png)
 
 ---
 
@@ -120,16 +129,19 @@ def sync_crm_to_cmi():
 **Frecuencia de Sincronización**: Semanal
 
 **Datos Recopilados**:
+
 - Precios de competencia (misma zona, tipología similar)
 - Días en mercado de propiedades comparables
 - Volumen de oferta por zona
 
 **Casos de Uso**:
+
 - Benchmarking de precios (¿estamos caros?)
 - Análisis de saturación de mercado
 - Detección de tendencias (precios subiendo/bajando)
 
 **Limitaciones Legales**:
+
 - Solo datos públicos (nunca datos privados de usuarios)
 - Cumplimiento TOS de cada portal
 - No revendemos ni publicamos estos datos
@@ -166,12 +178,14 @@ Medir efectividad de la web corporativa en generación de leads:
 **Método**: WhatsApp Cloud API
 
 **Propósito**:
+
 - Trackear conversaciones de WhatsApp con clientes
 - Medir tiempo de respuesta (KPI: <15 min)
 - Analizar sentimiento de conversaciones (NLP)
 - Generar alertas si cliente insatisfecho
 
 **Ejemplo de uso**:
+
 ```
 Cliente envía:
 "Llevo 3 días esperando respuesta sobre la visita"
@@ -212,6 +226,7 @@ Análisis CMI:
 ### 💡 8. Firma Electrónica (DocuSign / SignNow)
 
 **Valor**:
+
 - Trackear ciclo completo: Lead → Visita → Oferta → **Firma** → Cierre
 - Medir "tiempo desde oferta aceptada hasta firma"
 - Alertas si firma pendiente >7 días
@@ -221,6 +236,7 @@ Análisis CMI:
 ### 💡 9. Sistema de Llamadas (VoIP / Centrales Telefónicas)
 
 **Valor**:
+
 - Grabar todas las llamadas (con consentimiento)
 - Analizar duración promedio de llamadas efectivas
 - Detectar keywords ("precio", "competencia", "pensármelo")
@@ -231,6 +247,7 @@ Análisis CMI:
 ### 💡 10. Redes Sociales (Facebook, Instagram, LinkedIn)
 
 **Valor**:
+
 - Medir impacto de campañas sociales en leads
 - Analizar sentimiento de comentarios
 - Identificar influencers que mencionan la marca
@@ -243,19 +260,20 @@ No solo el CMI consume de otros sistemas. También **expone su propia API** para
 
 ### 📡 Endpoints Disponibles (API v1.0)
 
-**Base URL**: `https://api.cmi-dac.legalintermedia.com/v1/`
+**Base URL**: `https://api-cmi.divisionagentes.com/v1/`
 
 #### GET /kpis
 
 Obtener valores actuales de KPIs:
 
 ```bash
-curl -X GET https://api.cmi-dac.legalintermedia.com/v1/kpis \
+curl -X GET https://api-cmi.divisionagentes.com/v1/kpis \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json"
 ```
 
 **Respuesta**:
+
 ```json
 {
   "timestamp": "2026-02-15T10:30:00Z",
@@ -287,7 +305,7 @@ curl -X GET https://api.cmi-dac.legalintermedia.com/v1/kpis \
 Enviar alerta personalizada al CMI:
 
 ```bash
-curl -X POST https://api.cmi-dac.legalintermedia.com/v1/alerts \
+curl -X POST https://api-cmi.divisionagentes.com/v1/alerts \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -304,11 +322,13 @@ curl -X POST https://api.cmi-dac.legalintermedia.com/v1/alerts \
 
 **Método**: Bearer Token (JWT)
 **Obtención de Token**:
-1. Solicitar a IT: <it@legalintermedia.com>
+
+1. Solicitar a IT: <it@dac-sl.es>
 2. Justificar caso de uso
 3. Recibir token con permisos específicos (solo lectura / escritura)
 
 **Seguridad**:
+
 - Tokens expiran cada 90 días
 - Rate limit: 100 requests/hora
 - IP whitelisting opcional
@@ -322,6 +342,7 @@ curl -X POST https://api.cmi-dac.legalintermedia.com/v1/alerts \
 **Objetivo**: Mostrar KPIs en tiempo real en pantalla grande de oficina
 
 **Solución**:
+
 ```html
 <!-- dashboard_tv.html -->
 <!DOCTYPE html>
@@ -357,6 +378,7 @@ curl -X POST https://api.cmi-dac.legalintermedia.com/v1/alerts \
 **Objetivo**: Recibir notificaciones de KPIs críticos en Slack
 
 **Solución**:
+
 ```python
 # scripts/integrations/cmi_to_slack.py
 import requests
@@ -391,11 +413,13 @@ if __name__ == '__main__':
 El CMI utiliza un patrón **híbrido**:
 
 **ETL (Extract-Transform-Load)**: Para sistemas legacy sin API
+
 ```
 CRM Antiguo → CSV Export → Python Transform → PostgreSQL
 ```
 
 **ELT (Extract-Load-Transform)**: Para sistemas modernos con API
+
 ```
 API Moderna → PostgreSQL (raw) → DBT Transform → Vista Final
 ```
@@ -476,19 +500,19 @@ graph TB
 alerts:
   crm_sync_failed:
     severity: high
-    notify: [it@legalintermedia.com, cto@legalintermedia.com]
+    notify: [it@dac-sl.es, cto@dac-sl.es]
     retry: auto (3 attempts)
     escalate_after: 4 hours
 
   erp_data_format_error:
     severity: critical
-    notify: [it@legalintermedia.com, cfo@legalintermedia.com]
+    notify: [it@dac-sl.es, cfo@dac-sl.es]
     retry: manual only
     escalate_after: immediate
 
   portal_scraping_blocked:
     severity: medium
-    notify: [it@legalintermedia.com]
+    notify: [it@dac-sl.es]
     retry: auto (wait 24h, then retry)
     escalate_after: 3 days
 ```
@@ -575,6 +599,7 @@ Imagina:
 ```
 
 **Tecnología habilitante**:
+
 - Conectores estandarizados (Apache Kafka, Airbyte)
 - Orquestación visual (n8n, Zapier)
 - Zero-code integrations
@@ -598,9 +623,10 @@ Dashboard interno "Salud de Integraciones" (solo IT):
 
 ## 10.14. Soporte para Integraciones
 
-**Contacto**: <integrations@legalintermedia.com>
+**Contacto**: <it@dac-sl.es>
 
 **SLA de Soporte**:
+
 - 🔴 Integración crítica caída (CRM, ERP): Respuesta <2h, resolución <8h
 - 🟡 Integración secundaria con errores: Respuesta <24h, resolución <72h
 - 🟢 Nueva integración solicitada: Respuesta <1 semana, desarrollo 8-16 semanas

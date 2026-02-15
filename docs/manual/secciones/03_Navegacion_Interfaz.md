@@ -25,6 +25,8 @@ El Cuadro de Mando se organiza bajo una arquitectura de "Embudo de Datos", permi
   * **Gráfico de Embudo (Funnel)**: Visualiza la pérdida de eficiencia desde que entra un lead hasta que se cierra el contrato. Vital para detectar dónde "se nos escapan" los clientes.
   * **Treemap (Mapa de Árbol)**: Categoriza la cartera por volumen de precio. Los cuadros más grandes representan las zonas con más stock.
 
+![Rendimiento Agentes](../../graficos/agent_performance_mockup.png)
+
 ### � Nivel 3: Analítica Operativa (El Dato Atómico)
 
 * **Pestaña**: `Detalle Transaccional`
@@ -56,6 +58,8 @@ Cada directivo tiene sus propias necesidades. El sistema permite personalizar la
 1. **Vistas Personales**: Si usted siempre filtra por "Oficina Norte" y "Venta", puede guardar esa configuración como un **Bookmark Personal**.
 2. **Exportación Selectiva**: Si necesita un gráfico para una presentación de PowerPoint, use el icono de "Exportar a PowerPoint" o "Captura de Visual" en la cabecera del gráfico.
 3. **Alertas de Datos**: Configure alertas en las tarjetas de KPI principales. Por ejemplo: "Avisarme al correo si el GCI supera los 100.000€ este mes".
+
+![Alertas Push](../../graficos/push_alerts_mockup.png)
 
 ---
 
@@ -142,6 +146,10 @@ Aumenta tu productividad con estos atajos:
 
 ## 3.7. Gestos Táctiles (Tablet / Pantalla Touch)
 
+El CMI está optimizado para pantallas táctiles en salas de reuniones y la pantalla de gran formato Samsung Flip.
+
+![Samsung Flip](../../graficos/samsung_flip_mockup.png)
+
 El CMI está optimizado para pantallas táctiles en salas de reuniones:
 
 | Gesto | Acción |
@@ -174,10 +182,11 @@ El CMI-DAC se estructura en **8 páginas principales**:
 **Audiencia**: CEO, Dirección
 **Tiempo de lectura**: 30 segundos
 **Elementos clave**:
-- 🎯 Tarjeta GCI vs. Objetivo (grande, centrada)
-- 📈 Sparklines de tendencia trimestral
-- 🚦 Semáforos de las 4 perspectivas BSC
-- 🗓️ Comparativa YoY
+
+* 🎯 Tarjeta GCI vs. Objetivo (grande, centrada)
+* 📈 Sparklines de tendencia trimestral
+* 🚦 Semáforos de las 4 perspectivas BSC
+* 🗓️ Comparativa YoY
 
 **Cuándo usarla**: Primera consulta del día, reuniones de estrategia
 
@@ -188,10 +197,11 @@ El CMI-DAC se estructura en **8 páginas principales**:
 **Audiencia**: Jefes de Equipo, RRHH
 **Tiempo de análisis**: 5-10 minutos
 **Elementos clave**:
-- 📊 Ranking de productividad (Top 10)
-- 🎭 Matriz de desempeño (Captación vs. Cierre)
-- 📉 Embudo de conversión individual
-- 🎯 Comparativa agente vs. media del equipo
+
+* 📊 Ranking de productividad (Top 10)
+* 🎭 Matriz de desempeño (Captación vs. Cierre)
+* 📉 Embudo de conversión individual
+* 🎯 Comparativa agente vs. media del equipo
 
 **Cuándo usarla**: Preparación de evaluaciones 1-on-1, detección de formación
 
@@ -202,10 +212,11 @@ El CMI-DAC se estructura en **8 páginas principales**:
 **Audiencia**: Coordinador de Ventas, Marketing
 **Tiempo de análisis**: 10 minutos
 **Elementos clave**:
-- 🗺️ Mapa geográfico de inventario
-- ⏱️ Distribución de DOM (Days on Market)
-- 💰 Treemap por zona y precio
-- 📋 Tabla de "inmuebles zombi" (>180 días)
+
+* 🗺️ Mapa geográfico de inventario
+* ⏱️ Distribución de DOM (Days on Market)
+* 💰 Treemap por zona y precio
+* 📋 Tabla de "inmuebles zombi" (>180 días)
 
 **Cuándo usarla**: Auditoría semanal de inventario, ajustes de precio
 
@@ -216,10 +227,11 @@ El CMI-DAC se estructura en **8 páginas principales**:
 **Audiencia**: Director Comercial, Marketing
 **Tiempo de análisis**: 8 minutos
 **Elementos clave**:
-- 🌟 NPS Score y evolución
-- 📊 Funnel de conversión de leads
-- 💶 CAC (Coste de Adquisición) por canal
-- 📈 Ratio precio conseguido vs. inicial
+
+* 🌟 NPS Score y evolución
+* 📊 Funnel de conversión de leads
+* 💶 CAC (Coste de Adquisición) por canal
+* 📈 Ratio precio conseguido vs. inicial
 
 **Cuándo usarla**: Planificación de campañas, análisis ROI marketing
 
@@ -230,10 +242,11 @@ El CMI-DAC se estructura en **8 páginas principales**:
 **Audiencia**: Director de Operaciones
 **Tiempo de análisis**: 10 minutos
 **Elementos clave**:
-- 🔄 Ciclo de vida promedio de una operación
-- 📉 Tasa de caída (fall-through rate)
-- 🎯 % de exclusivas en cartera
-- ⏲️ Tiempo promedio de respuesta a leads
+
+* 🔄 Ciclo de vida promedio de una operación
+* 📉 Tasa de caída (fall-through rate)
+* 🎯 % de exclusivas en cartera
+* ⏲️ Tiempo promedio de respuesta a leads
 
 **Cuándo usarla**: Identificación de cuellos de botella, mejora de procesos
 
@@ -244,10 +257,11 @@ El CMI-DAC se estructura en **8 páginas principales**:
 **Audiencia**: RRHH, Formación
 **Tiempo de análisis**: 5 minutos
 **Elementos clave**:
-- 📚 Horas de formación por agente
-- 💻 Tasa de adopción tecnológica (CRM)
-- 😊 eNPS (Employee Net Promoter Score)
-- 🔄 Tasa de rotación del equipo
+
+* 📚 Horas de formación por agente
+* 💻 Tasa de adopción tecnológica (CRM)
+* 😊 eNPS (Employee Net Promoter Score)
+* 🔄 Tasa de rotación del equipo
 
 **Cuándo usarla**: Planificación de formación, estrategia de retención
 
@@ -258,10 +272,11 @@ El CMI-DAC se estructura en **8 páginas principales**:
 **Audiencia**: Contabilidad, Auditoría
 **Tiempo de análisis**: Variable (búsqueda específica)
 **Elementos clave**:
-- 📋 Tabla completa de operaciones
-- 🔍 Búsqueda y filtrado avanzado
-- 📥 Exportación selectiva
-- 🧮 Cálculos personalizados
+
+* 📋 Tabla completa de operaciones
+* 🔍 Búsqueda y filtrado avanzado
+* 📥 Exportación selectiva
+* 🧮 Cálculos personalizados
 
 **Cuándo usarla**: Verificación de datos, auditorías, reconciliación
 
@@ -272,10 +287,11 @@ El CMI-DAC se estructura en **8 páginas principales**:
 **Audiencia**: CFO, Analistas
 **Tiempo de análisis**: 15 minutos
 **Elementos clave**:
-- 📅 YoY (Year-over-Year) por KPI
-- 📈 Tendencias de largo plazo (3 años)
-- 🎯 Cumplimiento de objetivos histórico
-- 🔮 Proyecciones basadas en tendencia
+
+* 📅 YoY (Year-over-Year) por KPI
+* 📈 Tendencias de largo plazo (3 años)
+* 🎯 Cumplimiento de objetivos histórico
+* 🔮 Proyecciones basadas en tendencia
 
 **Cuándo usarla**: Presentaciones a inversores, planificación estratégica
 
@@ -283,9 +299,12 @@ El CMI-DAC se estructura en **8 páginas principales**:
 
 ## 3.9. Técnicas Avanzadas de Navegación
 
+![Interfaz de Gestos](../../graficos/gesture_interface_mockup.png)
+
 ### 🎨 Uso de Highlight y Cross-Filtering
 
 **Cross-Filtering** (Filtrado Cruzado):
+
 ```
 1. Haga clic en "Madrid" en el gráfico de Zonas
 2. TODOS los gráficos de la página se actualizan para mostrar solo Madrid
@@ -293,6 +312,7 @@ El CMI-DAC se estructura en **8 páginas principales**:
 ```
 
 **Highlight** (Resaltado):
+
 ```
 1. Mantenga pulsado Ctrl (Cmd en Mac)
 2. Haga clic en "Madrid" en el gráfico de Zonas
@@ -303,12 +323,14 @@ El CMI-DAC se estructura en **8 páginas principales**:
 ### 🔍 Modo Focus y Drill-Through
 
 **Focus Mode** (Modo Enfoque):
-- Clic en el icono `⛶` de cualquier visual
-- El gráfico se expande a pantalla completa
-- Ideal para presentaciones o análisis profundo
-- Presione `Esc` para salir
+
+* Clic en el icono `⛶` de cualquier visual
+* El gráfico se expande a pantalla completa
+* Ideal para presentaciones o análisis profundo
+* Presione `Esc` para salir
 
 **Drill-Through** (Navegar a detalle):
+
 ```
 Ejemplo:
 1. En página "General", clic derecho en el agente "Carlos Gómez"
@@ -326,6 +348,7 @@ Año → Trimestre → Mes → Semana → Día
 ```
 
 **Uso**:
+
 1. Hacer doble clic en una barra/sector
 2. El gráfico "baja" un nivel en la jerarquía
 3. Botón ↑ (ir arriba) para volver al nivel superior
@@ -355,16 +378,19 @@ Los **bookmarks** (marcadores) permiten guardar configuraciones de filtros y vis
 ### 💡 Bookmarks Recomendados por Rol
 
 **CEO**:
-- "Vista Matutina": GCI + YoY + Semáforos
-- "Comparativa Oficinas": Ranking por oficina
+
+* "Vista Matutina": GCI + YoY + Semáforos
+* "Comparativa Oficinas": Ranking por oficina
 
 **Jefe de Equipo**:
-- "Mi Equipo Completo": Filtrado por su oficina
-- "Alertas Semanales": Solo KPIs en rojo
+
+* "Mi Equipo Completo": Filtrado por su oficina
+* "Alertas Semanales": Solo KPIs en rojo
 
 **Agente**:
-- "Mi Rendimiento": Solo sus propios datos
-- "Comparativa Anónima": Su rendimiento vs. promedio
+
+* "Mi Rendimiento": Solo sus propios datos
+* "Comparativa Anónima": Su rendimiento vs. promedio
 
 ---
 
@@ -383,22 +409,27 @@ Los **bookmarks** (marcadores) permiten guardar configuraciones de filtros y vis
 ### 🔗 Compartir un Dashboard
 
 **Opción 1: Enlace Directo**
+
 ```
 https://app.powerbi.com/groups/[workspace-id]/reports/[report-id]
 ```
-- El destinatario DEBE tener permisos en el workspace
-- No caduca
-- Respeta Row-Level Security
+
+* El destinatario DEBE tener permisos en el workspace
+
+* No caduca
+* Respeta Row-Level Security
 
 **Opción 2: Publicar en Web** ⚠️
-- Genera URL pública (PELIGRO: sin autenticación)
-- Solo usar para datos no sensibles
-- Requiere aprobación de administrador
+
+* Genera URL pública (PELIGRO: sin autenticación)
+* Solo usar para datos no sensibles
+* Requiere aprobación de administrador
 
 **Opción 3: Suscripción por Email**
-- Envía snapshot diario/semanal automático
-- Formato PDF adjunto
-- Configurable por página específica
+
+* Envía snapshot diario/semanal automático
+* Formato PDF adjunto
+* Configurable por página específica
 
 ---
 
@@ -406,43 +437,57 @@ https://app.powerbi.com/groups/[workspace-id]/reports/[report-id]
 
 ### ✅ Hacer
 
-- **Empezar siempre por la Vista General** antes de profundizar
-- **Usar filtros de fecha inteligentes** (Este Mes, Últimos 90 Días, YTD)
-- **Verificar filtros activos** antes de tomar decisiones
-- **Guardar bookmarks** de vistas recurrentes
-- **Usar modo focus** para análisis profundo sin distracciones
+* **Empezar siempre por la Vista General** antes de profundizar
+* **Usar filtros de fecha inteligentes** (Este Mes, Últimos 90 Días, YTD)
+* **Verificar filtros activos** antes de tomar decisiones
+* **Guardar bookmarks** de vistas recurrentes
+* **Usar modo focus** para análisis profundo sin distracciones
 
 ### ❌ Evitar
 
-- Navegar sin revisar qué filtros están aplicados
-- Exportar datos masivos sin necesidad real
-- Hacer zoom excesivo (>150%) que distorsiona visuales
-- Mantener múltiples pestañas abiertas (consume RAM)
-- Ignorar los tooltips (pasan información clave)
+* Navegar sin revisar qué filtros están aplicados
+* Exportar datos masivos sin necesidad real
+* Hacer zoom excesivo (>150%) que distorsiona visuales
+* Mantener múltiples pestañas abiertas (consume RAM)
+* Ignorar los tooltips (pasan información clave)
 
 ---
 
-## 3.13. Resolución de Problemas de Visualización
+## 3.14. Consultas en Lenguaje Natural (Q&A)
+
+El CMI permite "preguntar" a los datos en lenguaje humano (ej: "¿Cuál fue el agente con más cierres en Junio?").
+
+![Preguntas y Respuestas](../../graficos/powerbi_qa.png)
+
+---
+
+## 3.15. Resolución de Problemas de Visualización
 
 ### 📊 "El gráfico muestra (Blank) o valores vacíos"
 
 **Causas**:
-- Datos realmente vacíos en ese filtro
-- Campo calculado con error de fórmula
-- Relación entre tablas rota
+
+* Datos realmente vacíos en ese filtro
+* Campo calculado con error de fórmula
+* Relación entre tablas rota
 
 **Solución**:
+
 1. Quitar todos los filtros y verificar si aparecen datos
 2. Si persiste, reportar a IT con screenshot
 
 ### 🗺️ "El mapa no se visualiza correctamente"
 
+![Vista de Mapa](../../graficos/map_mockup.png)
+
 **Causas**:
-- Geolocalización deshabilitada en el navegador
-- API de Bing Maps bloqueada por firewall
-- Coordenadas incorrectas en los datos
+
+* Geolocalización deshabilitada en el navegador
+* API de Bing Maps bloqueada por firewall
+* Coordenadas incorrectas en los datos
 
 **Solución**:
+
 1. Permitir geolocalización en configuración del navegador
 2. Verificar conexión a internet
 3. Usar visual alternativo (tabla o gráfico de barras)
@@ -450,10 +495,12 @@ https://app.powerbi.com/groups/[workspace-id]/reports/[report-id]
 ### 🎨 "Los colores están diferentes a los de siempre"
 
 **Causas**:
-- Cambio de tema del informe por administrador
-- Modo oscuro del sistema operativo
-- Configuración de accesibilidad activa
+
+* Cambio de tema del informe por administrador
+* Modo oscuro del sistema operativo
+* Configuración de accesibilidad activa
 
 **Solución**:
-- Los colores son parte del diseño y solo pueden cambiarlos administradores
-- Si afecta legibilidad, reportar a UX team
+
+* Los colores son parte del diseño y solo pueden cambiarlos administradores
+* Si afecta legibilidad, reportar a UX team

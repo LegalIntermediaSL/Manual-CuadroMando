@@ -37,6 +37,7 @@ graph LR
 ### 📌 Versión Actual: 2.5 (Febrero 2026)
 
 **Características principales**:
+
 - 20 KPIs distribuidos en 4 perspectivas BSC
 - 8 páginas de dashboard interactivas
 - Row-Level Security implementada
@@ -84,6 +85,7 @@ graph LR
 | **Análisis de Sentimiento** | Procesar reviews de clientes con NLP | 🟢 Baja | Backlog |
 
 **Detalle: Forecasting Automático**
+
 ```
 Funcionalidad:
 - Modelo de Machine Learning entrenado con 3 años de histórico
@@ -150,6 +152,7 @@ Probabilidad de éxito: 82%"
 ```
 
 **Tecnología requerida**:
+
 - Modelos de IA avanzados (Deep Learning)
 - Integración con datos de mercado externos
 - Simulador de escenarios (what-if analysis)
@@ -172,6 +175,7 @@ La causa principal es #1. Recomiendo campaña de captación urgente."
 ```
 
 **Tecnología requerida**:
+
 - Integración con GPT-4 o superior
 - Base de conocimiento semántica
 - NLP avanzado en español
@@ -181,11 +185,13 @@ La causa principal es #1. Recomiendo campaña de captación urgente."
 #### 3. **Marketplace de Dashboards** (2028)
 
 Plataforma donde usuarios pueden:
+
 - Compartir configuraciones de dashboards
 - Vender plantillas personalizadas
 - Descargar dashboards de otras industrias adaptados
 
 **Modelo de negocio**:
+
 - Gratuito para uso interno
 - Monetización por dashboards premium de terceros
 - Revenue share con creadores
@@ -282,6 +288,8 @@ Tecnologías que estamos evaluando para futuras versiones:
 | **VR/AR** | Visualización de KPIs en realidad aumentada | ❌ Inmadura | 2029+ |
 | **Quantum Computing** | Optimización de carteras con algoritmos cuánticos | ❌ Inmadura | 2030+ |
 
+![Visión AR](../../graficos/ar_glasses_view_mockup.png)
+
 ---
 
 ## 9.8. Política de Depreciación de Features
@@ -313,6 +321,7 @@ Tu opinión cuenta. Formas de participar en la evolución del CMI:
 Accede al formulario mensual: [Link interno SharePoint]
 
 **Campos**:
+
 - ¿Qué problema estás intentando resolver?
 - ¿Qué feature lo resolvería?
 - ¿Cuántas veces al mes lo usarías?
@@ -334,16 +343,18 @@ Las 2 más votadas se incluyen en el roadmap del próximo trimestre.
 Únete al grupo de beta testers y prueba features antes que nadie:
 
 **Beneficios**:
+
 - Acceso anticipado a nuevas funcionalidades
 - Influencia directa en el diseño final
 - Reconocimiento público como "contributor"
 
 **Requisitos**:
+
 - Usar el CMI al menos 2 veces por semana
 - Disponibilidad para dar feedback en 48h
 - Compromiso de 3 meses mínimo
 
-**Inscripción**: <bi@posiciona.com>
+**Inscripción**: <bi@tposiciona.es>
 
 ---
 
@@ -371,6 +382,7 @@ gantt
 ```
 
 **Garantías**:
+
 - ✅ Cero pérdida de datos
 - ✅ Doble sistema activo durante transición
 - ✅ Formación gratuita a todos los usuarios
@@ -415,6 +427,7 @@ En un horizonte de 5 años, visualizamos el CMI-DAC como:
 ### 🌟 Características Visionarias
 
 **1. Agente Autónomo de BI**
+
 ```
 El sistema no solo muestra datos, los interpreta y actúa:
 - Detecta un problema (DOM subiendo)
@@ -425,6 +438,7 @@ El sistema no solo muestra datos, los interpreta y actúa:
 ```
 
 **2. Gemelo Digital del Negocio**
+
 ```
 Simulador que replica el comportamiento de la inmobiliaria:
 "¿Qué pasaría si contrato 3 agentes más?"
@@ -434,6 +448,7 @@ Simulador que replica el comportamiento de la inmobiliaria:
 ```
 
 **3. Ecosistema de Apps Conectadas**
+
 ```
 CMI-DAC como plataforma central que conecta:
 - CRM (gestión de leads)
@@ -455,7 +470,7 @@ El CMI-DAC es **tu herramienta**. Su futuro depende de ti.
 
 > Si pudieras tener **una sola funcionalidad** en el CMI del futuro, que te hiciera la vida 10x más fácil, ¿cuál sería?
 
-**Envía tu respuesta a**: <futuro@posiciona.com>
+**Envía tu respuesta a**: <bi@tposiciona.es>
 
 Las mejores ideas se discutirán en sesión de brainstorming con CEO y CTO (próxima: Abril 2026).
 

@@ -1,5 +1,7 @@
 # 1. Introducción y Contexto Estratégico
 
+![Reporting Ejecutivo](../../graficos/executive_laptop_mockup.png)
+
 ## 1.1. El Porqué del Cambio: De la Intuición al Dato
 
 Durante décadas, el sector inmobiliario se ha movido por **intuición, olfato y "pies de calle"**. Si bien estos elementos siguen siendo vitales, el mercado actual —hiper-competitivo y digitalizado— requiere un nivel de precisión superior.
@@ -10,9 +12,11 @@ El **CMI-DAC** nace de la necesidad de responder a preguntas de negocio con dato
 * *¿Cuál es el retorno real de cada euro invertido en portales inmobiliarios?*
 * *¿Quiénes son nuestros agentes más productivos y qué patrones de comportamiento siguen?*
 
+![Dashboard Principal](../../graficos/dashboard_mockup.png)
+
 ### La Cultura de la Transparencia
 
-Este manual no solo describe una herramienta técnica; propone un cambio cultural en **LegalIntermedia**. El uso del CMI garantiza que todos los miembros del equipo, desde el CEO hasta el agente más novel, vean la misma realidad reflejada en los números. La transparencia genera confianza y la confianza acelera la toma de decisiones.
+Este manual no solo describe una herramienta técnica; propone un cambio cultural en **División de Agentes Consultores**. El uso del CMI garantiza que todos los miembros del equipo, desde el CEO hasta el agente más novel, vean la misma realidad reflejada en los números. La transparencia genera confianza y la confianza acelera la toma de decisiones.
 
 ---
 
@@ -60,7 +64,7 @@ Este documento ha sido diseñado para ser una herramienta viva. Se recomienda:
 * **Para el Equipo de IT**: Estudiar minuciosamente la sección 6 y los Anexos II y V.
 * **Para la Dirección**: Revisar los Casos Prácticos de la sección 5 para maximizar el ROI de las reuniones de estrategia.
 
-> **Compromiso de Autoría**: El diseño técnico y la consultoría estratégica de este modelo han sido ejecutados por la consultora **T*Posiciona**, en colaboración estrecha con el departamento de operaciones de **LegalIntermedia SL**.
+> **Compromiso de Autoría**: El diseño técnico y la consultoría estratégica de este modelo han sido ejecutados por la consultora **T*Posiciona**, en colaboración estrecha con el departamento de operaciones de **División de Agentes Consultores S.L.**
 
 El proyecto se estructura rigurosamente bajo las **cuatro perspectivas del Balanced Scorecard** de Kaplan y Norton, asegurando una visión holística del negocio:
 
@@ -304,8 +308,8 @@ Este documento es un **ente vivo** que evoluciona con el proyecto. Se compromete
 
 * **Actualización Semestral**: Incorporación de nuevos KPIs y funcionalidades
 * **Control de Versiones**: Cada cambio queda registrado en el repositorio Git
-* **Feedback Loop**: Los usuarios pueden sugerir mejoras vía email a <bi@posiciona.com>
+* **Feedback Loop**: Los usuarios pueden sugerir mejoras vía email a <bi@tposiciona.es>
 
 **Versión Actual**: 2.0 (Febrero 2026)
 **Próxima Revisión Programada**: Agosto 2026
-**Autor**: T*Posiciona Consulting | LegalIntermedia SL
+**Autor**: T*Posiciona Consulting | División de Agentes Consultores S.L.
