@@ -201,4 +201,362 @@ El manual y el código que sustenta el CMI-DAC se gestionan mediante **Git**.
 * **Rama Master**: Siempre contiene el código estable que corre en el servidor.
 * **Rama Develop**: Para pruebas de nuevos KPIs o cambios en el esquema.
 
-> 💡 **Nota Final de IT**: La robustez del sistema depende del rigor en el seguimiento de estos protocolos. El CMI-DAC no es solo un software, es un activo estratégico de la empresa.
+---
+
+## 6.10. Stack Tecnológico Detallado
+
+### 📚 Tecnologías Core
+
+| Capa | Tecnología | Versión | Justificación |
+|------|------------|---------|---------------|
+| **Frontend BI** | Microsoft Power BI | Service + Desktop 2.125+ | Estándar de industria, integración nativa con Azure |
+| **Backend ETL** | Python | 3.11+ | Flexibilidad, bibliotecas ricas (pandas, sqlalchemy) |
+| **Base de Datos** | PostgreSQL | 15.x | Open source, robusto, funciones analíticas avanzadas |
+| **Orquestación** | Docker + Docker Compose | 24.x | Portabilidad, reproducibilidad de entornos |
+| **Servidor** | Digital Ocean Droplet | Ubuntu 24.04 LTS | Relación coste-rendimiento óptima |
+| **Control de Versiones** | Git + GitHub | - | Trazabilidad completa de cambios |
+| **Monitoreo** | Uptime Robot + Logs personalizados | - | Alertas gratuitas y confiables |
+
+### 🔧 Bibliotecas Python Clave
+
+```python
+# requirements.txt
+pandas==2.2.0              # Manipulación de datos
+sqlalchemy==2.0.25         # ORM y conexión a PostgreSQL
+psycopg2-binary==2.9.9     # Driver PostgreSQL
+python-dotenv==1.0.0       # Gestión de variables de entorno
+schedule==1.2.0            # Tareas programadas
+requests==2.31.0           # Llamadas a APIs externas
+pytz==2024.1               # Manejo de zonas horarias
+```
+
+---
+
+## 6.11. Procesos ETL Documentados
+
+### 🔄 ETL Principal: run_pipeline.py
+
+**Frecuencia**: Diario, 05:00 AM (cron)
+**Duración típica**: 3-7 minutos
+**Dependencias**: Archivos CSV en `data/raw/`
+
+**Fases del proceso**:
+
+```mermaid
+graph LR
+    A[1. Validación<br/>de Archivos] --> B[2. Extracción<br/>de Datos]
+    B --> C[3. Limpieza y<br/>Transformación]
+    C --> D[4. Validación<br/>de Calidad]
+    D --> E{¿Datos OK?}
+    E -->|Sí| F[5. Carga a BD]
+    E -->|No| G[ALERTA<br/>Admin]
+    F --> H[6. Refresh<br/>Power BI]
+    H --> I[7. Log<br/>Exitoso]
+
+    style A fill:#e3f2fd
+    style D fill:#fff3e0
+    style E fill:#f3e5f5
+    style F fill:#e8f5e9
+    style G fill:#ffcdd2,color:#000
+    style I fill:#c8e6c9
+```
+
+### 📜 Ejemplo de Log Exitoso
+
+```log
+[2026-02-15 05:00:02] INFO: Iniciando ETL Pipeline v2.3.1
+[2026-02-15 05:00:03] INFO: Validando archivos de entrada...
+[2026-02-15 05:00:03] INFO: ✓ operaciones.csv (245 registros)
+[2026-02-15 05:00:03] INFO: ✓ agentes.csv (18 registros)
+[2026-02-15 05:00:03] INFO: ✓ inmuebles.csv (1,432 registros)
+[2026-02-15 05:00:15] INFO: Transformación completada. 0 errores, 3 advertencias
+[2026-02-15 05:00:45] INFO: Datos cargados exitosamente en PostgreSQL
+[2026-02-15 05:02:10] INFO: Refresh de Power BI solicitado
+[2026-02-15 05:05:22] INFO: ✅ Pipeline completado en 5m 20s
+```
+
+### 📜 Ejemplo de Log con Error
+
+```log
+[2026-02-15 05:00:02] INFO: Iniciando ETL Pipeline v2.3.1
+[2026-02-15 05:00:03] ERROR: Archivo operaciones.csv no encontrado
+[2026-02-15 05:00:03] INFO: Abortando pipeline para evitar corrupción de datos
+[2026-02-15 05:00:04] INFO: 🔔 Alerta enviada a admin@legalintermedia.com
+[2026-02-15 05:00:05] ERROR: ❌ Pipeline FALLIDO. Manual intervention required
+```
+
+---
+
+## 6.12. Guía de Comandos de Mantenimiento
+
+### 🖥️ Acceso SSH al Servidor
+
+```bash
+# Conectar al servidor (requiere clave SSH)
+ssh -i ~/.ssh/cmi_droplet.pem root@164.90.XXX.XXX
+
+# Verificar servicios activos
+systemctl status docker
+systemctl status postgresql
+
+# Ver logs en tiempo real
+tail -f /var/log/cmi/etl_pipeline.log
+```
+
+### 🐳 Comandos Docker
+
+```bash
+# Ver contenedores activos
+docker ps
+
+# Acceder al contenedor de Python
+docker exec -it cmi_etl bash
+
+# Reiniciar todos los servicios
+docker-compose restart
+
+# Ver logs de un servicio específico
+docker-compose logs -f postgres
+
+# Backup de la base de datos
+docker exec cmi_postgres pg_dump -U admin cmi_realty > backup_$(date +%Y%m%d).sql
+```
+
+### 🗄️ Comandos PostgreSQL
+
+```bash
+# Conectar a la base de datos
+psql -U admin -d cmi_realty
+
+# Verificar tamaño de tablas
+SELECT tablename, pg_size_pretty(pg_total_relation_size(schemaname||'.'||tablename)) AS size
+FROM pg_tables WHERE schemaname = 'public'
+ORDER BY pg_total_relation_size(schemaname||'.'||tablename) DESC;
+
+# Optimizar base de datos
+VACUUM ANALYZE;
+
+# Verificar conexiones activas
+SELECT count(*) FROM pg_stat_activity;
+```
+
+---
+
+## 6.13. Procedimientos de Backup y Recuperación
+
+### 💾 Estrategia 3-2-1
+
+El sistema implementa la regla de oro del backup:
+
+- **3** copias de los datos
+- **2** medios diferentes (nube + físico)
+- **1** copia offsite (fuera de las instalaciones)
+
+### 📅 Calendario de Backups
+
+| Tipo | Frecuencia | Retención | Ubicación | Automatizado |
+|------|------------|-----------|-----------|--------------|
+| **Incremental** | Cada 6 horas | 48 horas | Digital Ocean Spaces | ✅ Sí |
+| **Completo (BD)** | Diario 02:00 AM | 30 días | Servidor + NAS Corporativo | ✅ Sí |
+| **Completo (Sistema)** | Semanal (Domingos) | 12 semanas | Digital Ocean Snapshots | ✅ Sí |
+| **Archivo (Compliance)** | Mensual | 7 años | Cinta magnética offsite | ⚠️ Manual |
+
+### 🔄 Procedimiento de Recuperación
+
+**Escenario 1: Corrupción de datos reciente (< 24h)**
+
+```bash
+# 1. Detener servicios
+docker-compose down
+
+# 2. Restaurar desde backup incremental
+psql cmi_realty < /backups/incremental/latest.sql
+
+# 3. Reiniciar servicios
+docker-compose up -d
+
+# 4. Verificar integridad
+python scripts/verify_data_integrity.py
+
+# Tiempo estimado: 15 minutos
+```
+
+**Escenario 2: Pérdida total del servidor**
+
+```bash
+# 1. Provisionar nuevo droplet desde snapshot (5 min)
+# 2. Restaurar configuración de Docker (2 min)
+# 3. Restaurar backup mensual desde NAS (30 min)
+# 4. Aplicar incrementales hasta último disponible (10 min)
+# 5. Reconfigurar DNS y certificados SSL (15 min)
+# 6. Testing completo (30 min)
+
+# Tiempo estimado: 90 minutos (RTO)
+```
+
+**RTO (Recovery Time Objective)**: 2 horas
+**RPO (Recovery Point Objective)**: 6 horas
+
+---
+
+## 6.14. Monitoreo y Observabilidad
+
+### 📊 Dashboard de Salud del Sistema
+
+El administrador debe revisar diariamente:
+
+| Métrica | Umbral Verde | Umbral Amarillo | Umbral Rojo |
+|---------|--------------|-----------------|-------------|
+| **Uso CPU** | < 60% | 60-80% | > 80% |
+| **Uso RAM** | < 70% | 70-85% | > 85% |
+| **Uso Disco** | < 75% | 75-90% | > 90% |
+| **Latencia BD** | < 50ms | 50-200ms | > 200ms |
+| **Tiempo ETL** | < 5 min | 5-10 min | > 10 min |
+| **Uptime** | 99.9% | 99.0-99.9% | < 99.0% |
+
+### 🚨 Alertas Configuradas
+
+```yaml
+# alerts.yml
+alerts:
+  - name: "ETL Failed"
+    condition: exit_code != 0
+    action: email + sms to admin
+
+  - name: "High CPU Usage"
+    condition: cpu > 85% for 10 minutes
+    action: email to devops
+
+  - name: "Database Unreachable"
+    condition: connection_timeout
+    action: email + sms + pagerduty
+
+  - name: "Backup Failed"
+    condition: backup_status != success
+    action: email to admin + cto
+
+  - name: "Disk Space Critical"
+    condition: disk_usage > 90%
+    action: email + auto-cleanup old logs
+```
+
+---
+
+## 6.15. Seguridad: Hardening del Sistema
+
+### 🔐 Checklist de Seguridad Implementado
+
+- [x] Firewall configurado (solo puertos 22, 80, 443, 5432 abiertos)
+- [x] SSH con autenticación por llave (password deshabilitado)
+- [x] Fail2ban activo (bloqueo tras 3 intentos fallidos)
+- [x] Certificados SSL con renovación automática (Let's Encrypt)
+- [x] PostgreSQL con SSL obligatorio
+- [x] Credenciales en variables de entorno (nunca en código)
+- [x] Logs de auditoría activados (todas las conexiones BD)
+- [x] Actualizaciones de seguridad automáticas (unattended-upgrades)
+- [x] Backups encriptados (AES-256)
+- [x] 2FA obligatorio para todos los usuarios de Power BI
+
+### 🛡️ Política de Contraseñas
+
+```
+Requisitos:
+- Mínimo 16 caracteres
+- Al menos 1 mayúscula, 1 minúscula, 1 número, 1 símbolo
+- No puede contener palabras del diccionario
+- No puede reutilizar últimas 5 contraseñas
+- Caducidad: 90 días
+- Almacenamiento: Hash bcrypt (cost factor 12)
+```
+
+---
+
+## 6.16. Escalabilidad y Proyecciones de Crecimiento
+
+### 📈 Capacidad Actual vs. Proyectada
+
+| Recurso | Uso Actual | Capacidad Máxima | Margen | Acción |
+|---------|------------|------------------|--------|--------|
+| **Almacenamiento BD** | 8 GB | 25 GB | 68% libre | Monitorizar |
+| **Conexiones BD** | 12 | 100 | 88% libre | OK |
+| **RAM Servidor** | 4 GB | 8 GB | 50% libre | OK |
+| **Operaciones/año** | 2,500 | 25,000 | 90% libre | OK |
+
+### 🔮 Plan de Escalado
+
+**Escenario: Crecimiento 10x (alcanzar 25,000 operaciones/año)**
+
+```mermaid
+graph TD
+    A[Estado Actual<br/>8GB RAM] --> B{¿Crecimiento<br/>proyectado?}
+    B -->|3x| C[Upgrade a 16GB RAM<br/>€50/mes]
+    B -->|5x| D[Upgrade a 32GB RAM<br/>+ PostgreSQL Cluster]
+    B -->|10x| E[Migrar a<br/>Arquitectura Distribuida]
+
+    C --> C1[Capacidad: 7,500 ops/año]
+    D --> D1[Capacidad: 15,000 ops/año]
+    E --> E1[Capacidad: 50,000+ ops/año]
+
+    style A fill:#e3f2fd
+    style E fill:#c8e6c9
+```
+
+---
+
+## 6.17. Documentación para Desarrolladores
+
+### 📁 Estructura del Repositorio
+
+```
+CMI-DAC/
+├── data/
+│   ├── raw/              # Datos crudos (CSV de origen)
+│   └── processed/        # Datos limpios (intermedios)
+├── scripts/
+│   ├── etl/
+│   │   ├── extract.py
+│   │   ├── transform.py
+│   │   └── load.py
+│   ├── maintenance/
+│   │   ├── backup.sh
+│   │   └── cleanup.sh
+│   └── monitoring/
+│       └── health_check.py
+├── sql/
+│   ├── schema/           # DDL (CREATE TABLE)
+│   ├── views/            # Vistas del modelo en estrella
+│   └── migrations/       # Cambios de esquema versionados
+├── powerbi/
+│   └── CMI_DAC.pbix      # Archivo Power BI Desktop
+├── docker/
+│   ├── Dockerfile
+│   └── docker-compose.yml
+├── docs/
+│   └── manual/           # Este manual
+├── tests/
+│   └── test_etl.py       # Tests unitarios
+├── logs/                 # Logs de ejecución
+├── .env.example          # Template de variables de entorno
+├── requirements.txt      # Dependencias Python
+└── README.md             # Documentación técnica
+
+```
+
+### 🧪 Testing y Calidad de Código
+
+```bash
+# Ejecutar tests unitarios
+python -m pytest tests/ -v
+
+# Verificar calidad de código
+pylint scripts/**/*.py
+
+# Verificar cobertura de tests
+pytest --cov=scripts tests/
+
+# Objetivo: Cobertura > 80%
+```
+
+---
+
+> 💡 **Nota Final de IT**: La robustez del sistema depende del rigor en el seguimiento de estos protocolos. El CMI-DAC no es solo un software, es un activo estratégico de la empresa. Cada minuto invertido en mantenimiento preventivo ahorra horas de crisis reactiva.

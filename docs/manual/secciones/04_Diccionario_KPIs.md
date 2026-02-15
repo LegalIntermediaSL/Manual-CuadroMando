@@ -384,3 +384,306 @@ graph TD
 | **Visualización** | Gráfico de Barras Acumuladas. |
 | **Responsable** | Director de Formación. |
 | **Frecuencia de Revisión** | Trimestral. |
+
+---
+
+## 4.5. Relaciones e Interdependencias entre KPIs
+
+Los KPIs no existen en silos. Entender sus relaciones causa-efecto es fundamental para la toma de decisiones estratégicas.
+
+### 🔗 Mapa de Interdependencias
+
+```mermaid
+graph TD
+    CAP[Tasa de Captación<br/>CLI-04-NLV] -->|+3 meses| DOM[Días en Mercado<br/>PRO-01-DOM]
+    DOM -->|Reduce| GCI[Ingresos GCI<br/>FIN-01-GCI]
+
+    FORM[Inversión Formación<br/>CAP-05-TRA] -->|Mejora| PPA[Productividad Agente<br/>CAP-01-PPA]
+    PPA -->|Aumenta| GCI
+
+    NPS[Satisfacción Cliente<br/>CLI-01-NPS] -->|Genera| REF[Referencias Orgánicas]
+    REF -->|Reduce| CAC[Coste Adquisición<br/>CLI-02-CAC]
+
+    CAC -->|Mejora| NOI[Rentabilidad<br/>FIN-02-NOI]
+    GCI -->|Compone| NOI
+
+    EXC[% Exclusividad<br/>PRO-02-EXC] -->|Reduce| DOM
+    EXC -->|Protege| GCI
+
+    style GCI fill:#ffd54f,stroke:#f57f17,stroke-width:3px
+    style NOI fill:#ffd54f,stroke:#f57f17,stroke-width:3px
+```
+
+### 🎯 Correlaciones Clave Demostradas
+
+| Cuando esto SUBE ⬆️ | Esto BAJA ⬇️ | Lag Temporal | Fuerza |
+|---------------------|--------------|--------------|--------|
+| **Captación** | DOM futuro | 3-4 meses | Alta (r=0.72) |
+| **Formación** | Tasa de Caída | 2 meses | Media (r=0.58) |
+| **NPS** | CAC | 6 meses | Alta (r=0.81) |
+| **% Exclusividad** | DOM | Inmediato | Media (r=0.64) |
+| **Ticket Medio** | NOI % | Inmediato | Alta (r=0.79) |
+
+### ⚠️ Correlaciones Espurias (Falsos Positivos)
+
+No todas las correlaciones implican causalidad. Cuidado con:
+
+- **GCI vs. Temperatura**: Ambos suben en verano, pero no hay relación causal
+- **Agentes Nuevos vs. Ventas**: Los nuevos llegan cuando hay más trabajo, no lo generan
+- **Portales vs. Ventas**: Más portales no garantiza más ventas si el producto no es atractivo
+
+---
+
+## 4.6. Matriz de Priorización de KPIs
+
+No todos los KPIs son igual de importantes en cada momento. Use esta matriz para priorizar:
+
+### 🚦 Matriz de Impacto vs. Esfuerzo de Mejora
+
+```
+Alta Impacto │ 🎯 QUICK WINS        │ 🏔️ BIG BETS
+             │ • Tasa Captación     │ • Rentabilidad NOI
+             │ • % Exclusividad     │ • NPS
+             │ • CAC                │
+─────────────┼──────────────────────┼──────────────────
+Baja Impacto │ 🥱 LOW PRIORITY      │ ⚠️ MONEY PITS
+             │ • eNPS               │ • Ticket Medio
+             │ • Adopción Tech      │ • YoY Growth
+             │                      │
+             └──────────────────────┴──────────────────
+               Fácil de Mejorar      Difícil de Mejorar
+```
+
+### 📊 Estrategia Recomendada por Cuadrante
+
+**🎯 Quick Wins** (Ganancias Rápidas):
+- Enfoque: Tácticas de corto plazo
+- Ejemplo: Lanzar campaña de captación con incentivos
+- ROI: Alto e inmediato
+
+**🏔️ Big Bets** (Apuestas Grandes):
+- Enfoque: Estrategia de largo plazo
+- Ejemplo: Transformar cultura de servicio para mejorar NPS
+- ROI: Muy alto pero diferido (6-12 meses)
+
+**🥱 Low Priority** (Baja Prioridad):
+- Enfoque: Mantener sin inversión adicional
+- Acción: Monitorizar pasivamente
+
+**⚠️ Money Pits** (Trampas de Dinero):
+- Enfoque: No invertir recursos ahora
+- Nota: Pueden volverse importantes en otras fases
+
+---
+
+## 4.7. Ejemplos Prácticos de Lectura de KPIs
+
+### 📖 Caso 1: Detección Temprana de Crisis
+
+**Situación**: Es marzo. El GCI de febrero fue excelente (+15% vs. año pasado).
+
+**Análisis superficial**: "Todo va bien, no tocar nada"
+
+**Análisis profundo**:
+```
+1. Revisar Leading Indicator: Tasa de Captación
+   → Si captación de DICIEMBRE fue baja (-20%)
+   → Entonces GCI de MAYO estará en problemas
+
+2. Acción preventiva AHORA:
+   → Lanzar campaña agresiva de captación en marzo
+   → Objetivo: Compensar la caída de diciembre
+```
+
+**Resultado**: Crisis evitada 3 meses antes de que ocurra.
+
+---
+
+### 📖 Caso 2: Identificación de Agente en Burnout
+
+**Situación**: Agente "María" tiene excelente productividad (Top 3).
+
+**KPIs a revisar en conjunto**:
+
+| KPI | Valor María | Media Oficina | Semáforo |
+|-----|-------------|---------------|----------|
+| GCI Generado | €85,000 | €52,000 | 🟢 Verde |
+| Captaciones | 12 | 8 | 🟢 Verde |
+| Horas Extras | 25/mes | 5/mes | 🔴 Rojo |
+| eNPS Personal | 3/10 | 7/10 | 🔴 Rojo |
+
+**Diagnóstico**: María está quemada. Alto riesgo de fuga.
+
+**Acción**:
+- Reunión 1-on-1 urgente con RRHH
+- Redistribuir carga de trabajo
+- Ofrecer días de descanso compensatorios
+- Plan de desarrollo profesional
+
+---
+
+### 📖 Caso 3: Optimización de Marketing
+
+**Situación**: Presupuesto de marketing €10,000/mes distribuido:
+- Idealista: €5,000
+- Facebook Ads: €3,000
+- Google Ads: €2,000
+
+**Análisis por KPI**:
+
+| Canal | Leads | Conversión | GCI Generado | ROI |
+|-------|-------|------------|--------------|-----|
+| **Idealista** | 50 | 8% | €32,000 | 6.4x |
+| **Facebook** | 200 | 1% | €4,000 | 1.3x |
+| **Google** | 30 | 12% | €18,000 | 9.0x |
+
+**Insight**: Google tiene mejor ROI pero menos volumen.
+
+**Decisión Estratégica**:
+```
+Nueva distribución:
+- Idealista: €4,000 (mantener base)
+- Facebook: €1,000 (reducir a test mínimo)
+- Google: €5,000 (duplicar inversión)
+→ ROI proyectado global: +35%
+```
+
+---
+
+## 4.8. Errores Comunes en la Interpretación de KPIs
+
+### ❌ Error 1: "Vanity Metrics" (Métricas de Vanidad)
+
+**Problema**: Celebrar KPIs que "suenan bien" pero no impactan en el negocio.
+
+**Ejemplo**:
+- ❌ "Tenemos 10,000 seguidores en Instagram"
+- ✅ "Instagram nos generó 5 ventas (€25,000 GCI) este mes"
+
+**Regla**: Si el KPI no se conecta con GCI o NOI, es secundario.
+
+---
+
+### ❌ Error 2: Confundir Correlación con Causalidad
+
+**Problema**: Asumir que porque dos cosas ocurren juntas, una causa la otra.
+
+**Ejemplo**:
+- Observación: "Los meses con más lluvia tenemos menos ventas"
+- Conclusión errónea: "La lluvia causa menos ventas"
+- Realidad: "Los meses lluviosos (otoño) son históricamente bajos en el sector"
+
+**Solución**: Siempre buscar el mecanismo causal lógico.
+
+---
+
+### ❌ Error 3: Ignorar el Contexto Temporal
+
+**Problema**: Comparar periodos no equivalentes.
+
+**Ejemplo**:
+- ❌ Comparar GCI de Enero con GCI de Julio (estacionalidad)
+- ✅ Comparar GCI de Enero 2026 con Enero 2025 (YoY)
+
+**Regla**: Siempre comparar periodos similares o usar YoY.
+
+---
+
+### ❌ Error 4: Obsesión por KPIs en Verde
+
+**Problema**: Optimizar solo para que todo esté "verde" sin cuestionar los umbrales.
+
+**Ejemplo**:
+- Umbral de DOM: <90 días = Verde
+- Realidad de mercado: Competencia está en 45 días
+- Resultado: Estamos "en verde" pero perdiendo mercado
+
+**Solución**: Revisar umbrales semestralmente con benchmarks de sector.
+
+---
+
+### ❌ Error 5: Parálisis por Análisis
+
+**Problema**: Pasar tanto tiempo analizando datos que no queda tiempo para actuar.
+
+**Síntomas**:
+- Reuniones de 3 horas revisando todos los KPIs
+- Crear nuevos KPIs cada semana
+- Generar informes que nadie lee
+
+**Solución**: Regla del 80/20
+- El 80% del valor viene del 20% de los KPIs
+- Enfocarse en los 5 KPIs estratégicos principales
+- Límite de 30 min por reunión de revisión
+
+---
+
+## 4.9. Checklist de Revisión de KPIs por Frecuencia
+
+### 📅 Revisión Diaria (5 minutos)
+
+Para: CEO, Director Comercial
+
+- [ ] GCI del día vs. objetivo diario
+- [ ] Captaciones del día
+- [ ] Alertas críticas (si las hay)
+
+### 📊 Revisión Semanal (30 minutos)
+
+Para: Jefes de Equipo
+
+- [ ] GCI semanal vs. objetivo
+- [ ] Tasa de captación
+- [ ] Funnel de conversión
+- [ ] Top 3 y Bottom 3 agentes
+- [ ] DOM de propiedades nuevas
+
+### 📈 Revisión Mensual (2 horas)
+
+Para: Dirección + Mandos Intermedios
+
+- [ ] GCI mensual vs. presupuesto
+- [ ] YoY growth
+- [ ] NPS del mes
+- [ ] Análisis de causas de desviaciones
+- [ ] Acciones correctivas definidas
+- [ ] Revisión de alertas configuradas
+
+### 🎯 Revisión Trimestral (4 horas)
+
+Para: Comité de Dirección
+
+- [ ] Cumplimiento objetivos trimestrales (4 perspectivas BSC)
+- [ ] Rentabilidad operativa (NOI)
+- [ ] Rotación de talento
+- [ ] Análisis de tendencias (3 trimestres)
+- [ ] Ajustes estratégicos
+- [ ] Revisión de umbrales de KPIs
+
+### 🏆 Revisión Anual (8 horas + offsite)
+
+Para: CEO + Accionistas
+
+- [ ] Balance completo del año
+- [ ] Cumplimiento plan estratégico
+- [ ] Benchmarking con competencia
+- [ ] Definición objetivos año siguiente
+- [ ] Rediseño de KPIs si es necesario
+- [ ] Presupuesto y forecasting
+
+---
+
+## 4.10. Glosario Rápido de Términos de KPIs
+
+| Término | Definición Rápida |
+|---------|-------------------|
+| **Leading Indicator** | KPI que predice el futuro (ej. Captación → Ventas futuras) |
+| **Lagging Indicator** | KPI que mide el pasado (ej. GCI del mes cerrado) |
+| **Benchmark** | Valor de referencia del sector para comparar |
+| **Threshold** | Umbral que define si el KPI es verde/amarillo/rojo |
+| **YoY** | Year-over-Year: comparar con mismo periodo año anterior |
+| **MoM** | Month-over-Month: comparar con mes anterior |
+| **YTD** | Year-to-Date: acumulado desde enero hasta hoy |
+| **Cohort** | Grupo homogéneo para análisis (ej. agentes contratados en 2025) |
+| **Funnel** | Embudo de conversión (Lead → Visita → Oferta → Cierre) |
+| **Churn** | Tasa de abandono (clientes o empleados que se van) |
