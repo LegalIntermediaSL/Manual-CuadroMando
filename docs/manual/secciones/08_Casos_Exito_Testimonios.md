@@ -38,7 +38,7 @@ Desde la implementación del CMI-DAC en abril de 2025, la organización ha exper
 
 **Fase 1: Diagnóstico (Semana 1-2)**
 
-```
+```text
 Usando el CMI, se identificó:
 - Problema NO era falta de captaciones (18/mes, bueno)
 - Problema SÍ era DOM excesivo: 124 días promedio
@@ -90,7 +90,7 @@ Usando el CMI, se identificó:
 
 Su jefe de equipo usó el CMI para identificar el problema:
 
-```
+```text
 Dashboard "Análisis de Agentes" → Filtro: Laura Martínez
 
 Hallazgos:
@@ -195,7 +195,25 @@ graph TD
 
 ---
 
-## 8.5. Testimonios por Rol
+## 8.5. Caso de Éxito #4: Valorización mediante ESG y Eficiencia
+
+### 🌍 La Estrategia "Green Portfolio" (2025-2026)
+
+**Reto**: Una cartera de 50 activos institucionales con bajo rendimiento y alto DOM.
+**Solución vía CMI**:
+
+1. Se activó el filtrado por **ESG-Score** (Sección 4.5).
+2. Se identificó que los activos con Certificación Energética A/B se vendían un 15% más rápido y con un margen de comisión un 8% superior.
+3. **Acción**: Se invirtió en "lavado de cara energético" (mejoras menores de eficiencia) en 12 activos clave.
+
+**Resultado**:
+- Aumento del precio de salida: +12% promedio.
+- Reducción del DOM en esos activos: De 110 a 45 días.
+- Retorno de la inversión en mejoras: x3.2 en comisión neta.
+
+---
+
+## 8.6. Testimonios sobre la IA y Narrativa Inteligente
 
 ### 👔 Dirección y C-Level
 
@@ -302,7 +320,7 @@ El proyecto CMI-DAC ha recibido reconocimiento en la industria:
 
 **Inversión Total (Año 1)**:
 
-```
+```text
 Desarrollo e implementación:     €45,000
 Licencias Power BI Pro (15):     €9,900
 Infraestructura cloud (1 año):   €6,000
@@ -314,7 +332,7 @@ TOTAL INVERSIÓN:                 €80,900
 
 **Beneficios Medibles (Año 1)**:
 
-```
+```text
 Incremento GCI (+23%):                    +€397,000
 Reducción costes operativos (-18%):       +€42,000
 Ahorro en tiempo de reportes (8h→15min):  +€28,000

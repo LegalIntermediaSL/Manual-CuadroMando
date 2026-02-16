@@ -24,9 +24,17 @@ Este capítulo sirve como referencia rápida para resolver dudas terminológicas
 * **Listing**: Propiedad activa en cartera disponible para la venta o alquiler.
 * **NOI (Net Operating Income)**: El beneficio neto tras pagar todos los gastos operativos del negocio.
 
+### 🤖 Términos de Nueva Generación (PropTech 2026)
+
+* **AI Act Compliance**: Cumplimiento con la normativa europea sobre Inteligencia Artificial aplicada a la valoración de activos.
+* **AUM (Assets Under Management)**: Valor total de la cartera gestionada por la agencia en un momento dado.
+* **PropTech 3.0**: La era de la interoperabilidad total entre sistemas (CRM, ERP, BI) mediante APIs abiertas.
+* **Tokenización Inmobiliaria**: Fragmentación de la propiedad en activos digitales negociables (en fase de pruebas en el Roadmap).
+* **Predictive Valuation**: Uso de algoritmos de Machine Learning para estimar el precio futuro de un inmueble basado en tendencias macro.
+
 ---
 
-## 7.2. Preguntas Frecuentes (FAQ)
+## 7.2. Preguntas Frecuentes (FAQ) - Resolución de Dudas
 
 ### ❓ ¿Por qué no coinciden mis datos de Power BI con mi Excel personal?
 
@@ -62,7 +70,7 @@ Este capítulo sirve como referencia rápida para resolver dudas terminológicas
 
 ---
 
-## 7.2. Preguntas Frecuentes Ampliadas (FAQ)
+## 7.3. Profundización en Dudas Comunes
 
 ### 📊 Sobre los Datos y Actualización
 
@@ -85,6 +93,7 @@ Este capítulo sirve como referencia rápida para resolver dudas terminológicas
 #### ❓ ¿Puedo modificar los datos directamente en Power BI?
 
 **Respuesta**: **No**. Power BI es una herramienta de **visualización**, no de edición. Los datos se modifican en:
+
 * **CRM**: Para cambios en contactos, agentes, estados de operaciones
 * **Base de Datos** (solo administradores): Para correcciones masivas
 * **Archivos fuente CSV** (solo con autorización): Para importaciones históricas
@@ -109,6 +118,7 @@ Cualquier cambio en las fuentes se reflejará automáticamente en el próximo re
 #### ❓ No veo los datos de otros agentes, ¿es normal?
 
 **Respuesta**: **Sí**, si tu rol es "Agente". El sistema implementa Row-Level Security (RLS) que te muestra:
+
 * Tus propios datos completos
 * Promedios anónimos del equipo (para que te compares)
 * **No** verás datos individuales de compañeros (privacidad)
@@ -151,6 +161,7 @@ Si crees que deberías tener más acceso (ej. fuiste promovido a jefe de equipo)
 #### ❓ ¿Quién define los "objetivos" de los KPIs?
 
 **Respuesta**:
+
 * **KPIs estratégicos** (GCI, NOI, YoY): Definidos por CEO + CFO en plan anual
 * **KPIs tácticos** (captaciones, conversión): Definidos por Director Comercial trimestralmente
 * **KPIs operativos** (visitas, llamadas): Definidos por Jefes de Equipo mensualmente
@@ -160,6 +171,7 @@ Los objetivos se revisan y ajustan trimestralmente en función de la realidad de
 #### ❓ ¿Por qué mi "Productividad" es baja si cerré muchas ventas?
 
 **Respuesta**: La productividad no mide solo **cantidad** sino también **calidad**:
+
 * 10 ventas de €1,000 comisión = €10,000 GCI
 * 2 ventas de €8,000 comisión = €16,000 GCI
 
@@ -194,6 +206,7 @@ También recibirás un email mensual automático si estás en el Top 3 o Bottom 
 #### ❓ Los colores del dashboard han cambiado, ¿qué pasó?
 
 **Respuesta**: Probablemente el administrador actualizó el **tema visual** por:
+
 * Mejora de accesibilidad (contraste para daltónicos)
 * Rebranding corporativo
 * Optimización de legibilidad en proyectores
@@ -221,6 +234,7 @@ Los colores no afectan a los datos. Si dificulta tu trabajo, reporta a UX team.
 #### ❓ ¿Puedo descargar todos los datos a Excel?
 
 **Respuesta**:
+
 * **Sí, pero con límites**: Máximo 150,000 filas por exportación
 * **Requiere permisos**: Roles "Dirección" o "Admin" pueden exportar masivamente
 * **Uso controlado**: Exportaciones >500 registros se auditan automáticamente
@@ -241,6 +255,7 @@ Los colores no afectan a los datos. Si dificulta tu trabajo, reporta a UX team.
 #### ❓ ¿Puedo publicar los datos del CMI en redes sociales?
 
 **Respuesta**: **NO**. Los datos del CMI-DAC son **confidenciales** y propiedad de División de Agentes Consultores S.L. Compartir datos fuera de la organización sin autorización escrita constituye:
+
 * Violación de contrato
 * Incumplimiento RGPD
 * Posibles acciones legales
@@ -271,6 +286,7 @@ Si necesitas datos para presentación pública (ej. conferencia), solicita autor
 #### ❓ Los datos muestran "(Blank)" en algunos gráficos
 
 **Respuesta**: "(Blank)" significa que ese campo está **realmente vacío** en la base de datos:
+
 * **Causa legítima**: Operaciones antiguas (antes de 2020) tienen datos incompletos
 * **Causa errónea**: Falta rellenar campos obligatorios en el CRM
 
@@ -283,6 +299,7 @@ Si necesitas datos para presentación pública (ej. conferencia), solicita autor
 #### ❓ ¿Tengo que revisar el CMI todos los días?
 
 **Respuesta**: Depende de tu rol:
+
 * **CEO/Dirección**: Vistazo diario 5 min + revisión semanal profunda 30 min
 * **Jefes de Equipo**: Diaria 10-15 min
 * **Agentes**: Semanal 10 min (autoevaluación)
@@ -302,16 +319,19 @@ Si necesitas datos para presentación pública (ej. conferencia), solicita autor
 3. Si aprueba, desarrollo e implementación (4-6 semanas)
 
 **KPIs aceptados recientemente** (gracias a propuestas de usuarios):
+
 * "Tiempo medio de respuesta a lead" (propuesto por Mar, jefa de equipo)
 * "% de inmuebles con tour virtual" (propuesto por IT team)
 
 #### ❓ ¿El CMI reemplaza las reuniones 1-on-1 con mi jefe?
 
 **Respuesta**: **No**, las complementa. El CMI proporciona:
+
 * **Los datos objetivos** (qué está pasando)
 * **El contexto cuantitativo** (comparativa con equipo)
 
 Pero las reuniones 1-on-1 aportan:
+
 * **El "por qué"**: Contexto cualitativo, situaciones personales
 * **El "cómo mejorar"**: Coaching, formación, apoyo
 * **El "qué sientes"**: Motivación, satisfacción, preocupaciones

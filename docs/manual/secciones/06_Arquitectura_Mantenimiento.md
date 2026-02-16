@@ -242,7 +242,30 @@ pytz==2024.1               # Manejo de zonas horarias
 
 ---
 
-## 6.11. Procesos ETL Documentados
+## 6.11. Marco de Calidad de Datos (Data Quality Framework)
+
+No basta con que los datos lleguen; deben ser de alta calidad. El CMI-DAC implementa el estándar **DQ-6**:
+
+1. **Integridad**: ¿Faltan datos obligatorios (ej: precio de cierre)? El ETL rechaza líneas con campos críticos nulos.
+2. **Precisión**: ¿El precio está en un rango lógico (€50k - €10M)? Alerta si se detecta un "fat finger" (ej: añadir un cero de más).
+3. **Consistencia**: ¿El agente que firma existe en la dimensión de personal?
+4. **Actualidad (Timeliness)**: ¿Los datos son de las últimas 24h?
+5. **Unicidad**: Eliminación algorítmica de duplicados basada en la referencia catastral y fecha.
+6. **Validez**: Cumplimiento de formatos (email, teléfono, códigos postales).
+
+---
+
+## 6.12. Evolución hacia Arquitectura "API-First"
+
+El Roadmap 2026 contempla la eliminación total de archivos planos (CSV/Excel) en favor de conexiones directas:
+
+* **Webhooks**: El CRM notifica al CMI en tiempo real cada vez que se cierra una operación.
+* **API REST**: Consultas directas a portales inmobiliarios para obtener el DOM de la competencia sin intervención manual.
+* **Integración Zapier/Make**: Automatización de flujos de trabajo entre el CMI y herramientas de comunicación (Slack/WhatsApp).
+
+---
+
+## 6.13. Procesos ETL Documentados
 
 ### 🔄 ETL Principal: run_pipeline.py
 
@@ -455,9 +478,6 @@ alerts:
 
 ### 🔐 Checklist de Seguridad Implementado
 
-* [x] Firewall configurado (solo puertos 22, 80, 443, 5432 abiertos)
-* [x] SSH con autenticación por llave (password deshabilitado)
-* [x] Fail2ban activo (bloqueo tras 3 intentos fallidos)
 * [x] Certificados SSL con renovación automática (Let's Encrypt)
 * [x] PostgreSQL con SSL obligatorio
 * [x] Credenciales en variables de entorno (nunca en código)

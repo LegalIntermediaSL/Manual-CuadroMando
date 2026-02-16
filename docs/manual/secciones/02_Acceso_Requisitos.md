@@ -428,3 +428,35 @@ Al acceder al CMI-DAC, el usuario acepta las siguientes condiciones:
 * Publicar o compartir datos fuera de la organización
 
 **Consecuencias del Incumplimiento**: Revocación inmediata de acceso y posibles acciones legales según la gravedad.
+
+---
+
+## 2.12. Gobernanza de Datos y Data Stewardship
+
+Para asegurar que el CMI-DAC sea una herramienta de confianza, se ha establecido una estructura de **Gobernanza de Datos**:
+
+### 📋 El Rol del Data Steward
+
+Cada oficina cuenta con un "Data Steward" (normalmente el Coordinador de Oficina) encargado de:
+
+* **Validación**: Asegurar que los datos introducidos en el CRM sean correctos.
+* **Corrección**: Resolver duplicidades de clientes o errores en precios de cierre.
+* **Auditoría**: Realizar verificaciones aleatorias contra documentos físicos/PDFs (contratos).
+
+### ☁️ Por qué Cloud? (Digital Ocean vs. On-Premise)
+
+| Característica | 🔴 On-Premise (Servidor Local) | 🟢 Cloud (Digital Ocean + Power BI) |
+| :--- | :--- | :--- |
+| **Disponibilidad** | Limitada a la red local / VPN lenta | 99.9% desde cualquier lugar (24/7) |
+| **Seguridad** | Dependiente del firewall físico | Certificaciones SOC2, ISO 27001 |
+| **Actualización** | Manual y propensa a errores | Automatizada y transparente |
+| **Coste** | Alto (hardware + luz + mantenimiento) | Pago por uso escalable |
+| **Backup** | Riesgo de pérdida física | Redundancia geográfica automática |
+
+### 🔗 Integración SSO (Single Sign-On)
+
+El CMI-DAC está totalmente integrado con el ecosistema **Microsoft Entra ID (antes Azure AD)**. Esto significa que:
+
+1. **Una sola clave**: Usas la misma contraseña que para tu email corporativo.
+2. **Bajas automáticas**: Si un agente deja la empresa y se bloquea su email, su acceso al CMI se revoca instantáneamente.
+3. **Auditoría Centralizada**: Los registros de acceso se guardan en el log global de seguridad de la empresa.

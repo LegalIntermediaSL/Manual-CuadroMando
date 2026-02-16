@@ -302,7 +302,18 @@ Con el CMI-DAC, los datos son:
 
 ---
 
-## 1.12. Compromiso de Actualización de Este Manual
+## 1.12. Tendencias Cruciales Real Estate BI 2026
+
+Para que el CMI-DAC siga siendo una ventaja competitiva, se alinea con las macrotendencias del sector:
+
+1. **IA Generativa y Predictiva**: Ya no basta con saber qué pasó. El sistema evoluciona hacia modelos que predicen la probabilidad de cierre de una exclusiva en sus primeros 15 días.
+2. **Sostenibilidad y ESG**: La eficiencia energética y la gobernanza social son ahora activos financieros. El CMI empieza a integrar métricas de huella de carbono y certificaciones energéticas en la valoración de activos.
+3. **Digital Twins / IoT**: La integración de datos de uso real de los edificios (consumos, ocupación) permite una gestión de activos (Asset Management) de grado institucional.
+4. **Hiper-Personalización**: Dashboards que se adaptan automáticamente al comportamiento del usuario, destacando lo que es relevante para su zona o tipo de activo específico.
+
+---
+
+## 1.13. Compromiso de Actualización de Este Manual
 
 Este documento es un **ente vivo** que evoluciona con el proyecto. Se compromete a:
 

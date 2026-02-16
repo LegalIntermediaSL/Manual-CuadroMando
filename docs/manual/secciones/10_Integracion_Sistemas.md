@@ -221,7 +221,26 @@ Análisis CMI:
 
 ---
 
-## 10.4. Integraciones en Backlog (Futuras)
+### 🔄 8. Integración con Google Maps / Mapbox (Geo-Intelligence)
+
+**Estado**: 🟢 Activa
+**Propósito**: Enriquecer los datos de ubicación con capas de información urbana.
+- **Puntos de interés (POI)**: Distancia a metros, colegios y parques.
+- **Geocodificación Inversa**: Transformar coordenadas GPS en direcciones normalizadas para evitar duplicados.
+
+---
+
+## 10.4. Privacidad desde el Diseño (GDPR-Sync)
+
+Cualquier integración que mueva datos personales (leads, empleados) pasa por un filtro de privacidad:
+
+1. **Anonimización al Vuelo**: Los nombres de clientes se sustituyen por IDs únicos en la base de datos analítica si no son necesarios para el reporte.
+2. **Encriptación AES-256**: Los datos se encriptan antes de salir del sistema de origen.
+3. **Logs de Auditoría Inmutables**: Se registra quién, cuándo y para qué se movió cada dato.
+
+---
+
+## 10.5. Patrones Cloud-To-Cloud (C2C)
 
 ### 💡 8. Firma Electrónica (DocuSign / SignNow)
 

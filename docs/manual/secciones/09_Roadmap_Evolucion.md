@@ -86,7 +86,7 @@ graph LR
 
 **Detalle: Forecasting Automático**
 
-```
+```text
 Funcionalidad:
 - Modelo de Machine Learning entrenado con 3 años de histórico
 - Predice GCI de próximos 3 meses con intervalo de confianza
@@ -159,7 +159,16 @@ Probabilidad de éxito: 82%"
 
 ---
 
-#### 2. **CMI como Asistente Virtual** (2027)
+#### 2. **Inteligencia Geoespacial (Geo-BI)** (2027)
+
+Evolución de los mapas estáticos a capas de inteligencia sobre el territorio:
+- **Heatmaps de Demanda**: Ver en tiempo real dónde están buscando los compradores (datos agregados de portales).
+- **Zonificación por Rentabilidad**: Identificar manzanas exactas donde el ROI de alquiler es máximo.
+- **Predictor de Gentrificación**: Algoritmos que detectan barrios con potencial de revalorización en los próximos 24 meses.
+
+---
+
+#### 3. **CMI como Asistente Virtual** (2027)
 
 Interfaz conversacional con IA:
 
@@ -182,7 +191,16 @@ La causa principal es #1. Recomiendo campaña de captación urgente."
 
 ---
 
-#### 3. **Marketplace de Dashboards** (2028)
+#### 4. **Micro-Gamificación y Data-Badges** (2027)
+
+Para incentivar la calidad del dato:
+- **Cinturón Negro de Datos**: Reconocimiento a agentes con 0% de errores de entrada en 6 meses.
+- **Challenges Semanales**: "La oficina que baje más el DOM esta semana gana un bono de visibilidad en portales".
+- **Dashboard de Honor**: Pantallas en las oficinas físicas que celebran hitos en tiempo real.
+
+---
+
+#### 5. **Marketplace de Dashboards** (2028)
 
 Plataforma donde usuarios pueden:
 
@@ -225,7 +243,7 @@ Estas funcionalidades están en **testing privado** con grupo reducido de usuari
 
 Pequeñas sugerencias contextuales en el dashboard:
 
-```
+```text
 Ejemplo:
 Al entrar un lunes por la mañana:
 💡 "Tienes 3 inmuebles con DOM >90 días. ¿Quieres revisarlos ahora?"
@@ -241,7 +259,7 @@ Al entrar un lunes por la mañana:
 
 Integración con índices inmobiliarios públicos:
 
-```
+```text
 Tu GCI creció +15% YoY
 
 Mercado nacional: +8% YoY
@@ -259,7 +277,7 @@ Mercado local (Madrid): +12% YoY
 
 Compararse con oficinas similares (sin saber cuáles):
 
-```
+```text
 Tu oficina: DOM 68 días
 
 Oficinas similares (6-10 agentes, misma región):
@@ -428,7 +446,7 @@ En un horizonte de 5 años, visualizamos el CMI-DAC como:
 
 **1. Agente Autónomo de BI**
 
-```
+```text
 El sistema no solo muestra datos, los interpreta y actúa:
 - Detecta un problema (DOM subiendo)
 - Identifica causa raíz (sobreprecio)
@@ -439,7 +457,7 @@ El sistema no solo muestra datos, los interpreta y actúa:
 
 **2. Gemelo Digital del Negocio**
 
-```
+```text
 Simulador que replica el comportamiento de la inmobiliaria:
 "¿Qué pasaría si contrato 3 agentes más?"
 → Ejecuta 10,000 simulaciones
@@ -449,7 +467,7 @@ Simulador que replica el comportamiento de la inmobiliaria:
 
 **3. Ecosistema de Apps Conectadas**
 
-```
+```text
 CMI-DAC como plataforma central que conecta:
 - CRM (gestión de leads)
 - ERP (contabilidad y finanzas)

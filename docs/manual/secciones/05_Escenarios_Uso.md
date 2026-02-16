@@ -249,6 +249,7 @@ graph TD
 **Escenario**: Carlos solicita aumento del 20% en su split de comisiones.
 
 1. **Paso 1: Benchmarking Interno**
+
    ```
    Filtros:
    - Página: Análisis de Agentes
@@ -257,12 +258,13 @@ graph TD
    ```
 
    **Métricas a revisar**:
-   - GCI generado: €95,000
-   - Posición en ranking: 2 de 15
-   - Captaciones: 18 propiedades
-   - Tasa de conversión: 22% (vs. 15% media)
+   * GCI generado: €95,000
+   * Posición en ranking: 2 de 15
+   * Captaciones: 18 propiedades
+   * Tasa de conversión: 22% (vs. 15% media)
 
 2. **Paso 2: Análisis de Valor Real**
+
    ```
    Pregunta clave: ¿Cuánto le cuesta a la empresa si Carlos se va?
 
@@ -283,8 +285,8 @@ graph TD
    * Mostrar gráfico de su productividad vs. equipo
    * Reconocer su posición (Top 2)
    * Ofrecer split escalonado:
-     - Actual: 60% sobre primeros €80k
-     - Nuevo: 70% sobre lo que exceda €80k
+     * Actual: 60% sobre primeros €80k
+     * Nuevo: 70% sobre lo que exceda €80k
    * Vincular a objetivos: Mantener top 3 durante 2 trimestres
 
 ---
@@ -299,11 +301,12 @@ graph TD
    * Filtrar operaciones cerradas
    * Analizar "Hora del primer contacto efectivo"
    * Resultado ejemplo:
-     - 🟢 10:00-12:00: Tasa conversión 18%
-     - 🟡 16:00-18:00: Tasa conversión 12%
-     - 🔴 14:00-16:00: Tasa conversión 5% (hora de siesta)
+     * 🟢 10:00-12:00: Tasa conversión 18%
+     * 🟡 16:00-18:00: Tasa conversión 12%
+     * 🔴 14:00-16:00: Tasa conversión 5% (hora de siesta)
 
 2. **Paso 2: Optimizar Calendarios**
+
    ```
    Bloquear agendas:
    - 09:00-10:00: Preparación y planning
@@ -337,19 +340,19 @@ graph TD
 2. **Paso 2: Estrategia Diferenciada**
 
    **Centro (Zona Premium)**:
-   - ✅ Aumentar inversión en marketing (+30%)
-   - ✅ Asignar agentes senior exclusivamente
-   - ✅ Publicidad en medios premium (ABC, El País)
+   * ✅ Aumentar inversión en marketing (+30%)
+   * ✅ Asignar agentes senior exclusivamente
+   * ✅ Publicidad en medios premium (ABC, El País)
 
    **Zona Norte (Zona de Volumen)**:
-   - ⚖️ Mantener inversión actual
-   - 💡 Optimizar proceso (reducir DOM con mejores fotos)
-   - 🎯 Enfoque en automatización
+   * ⚖️ Mantener inversión actual
+   * 💡 Optimizar proceso (reducir DOM con mejores fotos)
+   * 🎯 Enfoque en automatización
 
    **Periferia (Zona No Rentable)**:
-   - ❌ Reducir inversión a mínimo mantenimiento
-   - 🔄 Replantear estrategia o salir de la zona
-   - 🚫 No asignar recursos exclusivos
+   * ❌ Reducir inversión a mínimo mantenimiento
+   * 🔄 Replantear estrategia o salir de la zona
+   * 🚫 No asignar recursos exclusivos
 
 ---
 
@@ -362,10 +365,11 @@ graph TD
 1. **Paso 1: Identificar Periodos Críticos**
    * Revisar histórico de GCI mensual (3 años)
    * Identificar meses de alta facturación:
-     - Marzo, Abril, Mayo (primavera)
-     - Septiembre, Octubre (post-verano)
+     * Marzo, Abril, Mayo (primavera)
+     * Septiembre, Octubre (post-verano)
 
 2. **Paso 2: Política de Vacaciones Basada en Datos**
+
    ```
    Reglas:
    - ✅ PERMITIDO: Vacaciones en Agosto, Enero (meses bajos)
@@ -415,14 +419,15 @@ graph TD
 **Frecuencia**: Lunes 9:00 AM
 
 **Agenda**:
+
 1. **[5 min]** Revisión rápida GCI semanal anterior
 2. **[10 min]** Análisis de pipeline: ¿Qué cerramos esta semana?
 3. **[10 min]** Identificar bloqueos: ¿Qué propiedades están estancadas?
 4. **[5 min]** Objetivos individuales para la semana
 
 **Dashboards a proyectar**:
-- Página "Análisis de Agentes"
-- Filtro: "Últimos 7 días"
+* Página "Análisis de Agentes"
+* Filtro: "Últimos 7 días"
 
 ---
 
@@ -432,6 +437,7 @@ graph TD
 **Frecuencia**: Primer viernes de mes
 
 **Agenda**:
+
 1. **[20 min]** Revisión 4 perspectivas BSC (Financiera, Cliente, Procesos, Aprendizaje)
 2. **[30 min]** Deep Dive en KPIs en rojo
 3. **[30 min]** Presentación de iniciativas por departamento
@@ -439,8 +445,8 @@ graph TD
 5. **[20 min]** Definición de acciones correctivas y responsables
 
 **Dashboards a proyectar**:
-- Página "Visión General"
-- Página "Comparativas Temporales"
+* Página "Visión General"
+* Página "Comparativas Temporales"
 
 ---
 
@@ -450,6 +456,7 @@ graph TD
 **Frecuencia**: Al cerrar cada trimestre
 
 **Agenda**:
+
 1. **[1h]** Presentación de resultados trimestrales
 2. **[1h]** Análisis de desviaciones y lecciones aprendidas
 3. **[1h]** Planificación estratégica del próximo trimestre
@@ -457,9 +464,9 @@ graph TD
 5. **[30min]** Sesión de Q&A
 
 **Documentos a preparar**:
-- Reporte ejecutivo exportado desde CMI (PDF)
-- Proyecciones financieras (Excel vinculado a CMI)
-- Propuestas de inversión respaldadas por datos
+* Reporte ejecutivo exportado desde CMI (PDF)
+* Proyecciones financieras (Excel vinculado a CMI)
+* Propuestas de inversión respaldadas por datos
 
 ---
 
@@ -467,25 +474,57 @@ graph TD
 
 ### ✅ Antes de Tomar una Decisión Importante
 
-- [ ] He revisado los KPIs de las 4 perspectivas BSC
-- [ ] He comparado con el mismo periodo del año anterior (YoY)
-- [ ] He identificado la causa raíz, no solo el síntoma
-- [ ] He consultado con los responsables de área afectados
-- [ ] He estimado el impacto económico de la decisión
-- [ ] He definido KPIs para medir el éxito de la acción
+* [ ] He revisado los KPIs de las 4 perspectivas BSC
+* [ ] He comparado con el mismo periodo del año anterior (YoY)
+* [ ] He identificado la causa raíz, no solo el síntoma
+* [ ] He consultado con los responsables de área afectados
+* [ ] He estimado el impacto económico de la decisión
+* [ ] He definido KPIs para medir el éxito de la acción
 
 ### ✅ Antes de una Reunión Estratégica
 
-- [ ] Dashboard actualizado (verificar fecha de última carga)
-- [ ] Filtros configurados según audiencia de la reunión
-- [ ] Exportaciones preparadas (PDF/PowerPoint)
-- [ ] Narrativa preparada: datos + historia
-- [ ] Proyector/pantalla probado con antelación
+* [ ] Dashboard actualizado (verificar fecha de última carga)
+* [ ] Filtros configurados según audiencia de la reunión
+* [ ] Exportaciones preparadas (PDF/PowerPoint)
+* [ ] Narrativa preparada: datos + historia
+* [ ] Proyector/pantalla probado con antelación
 
 ### ✅ Al Finalizar el Mes
 
-- [ ] Revisar cumplimiento de objetivos mensuales
-- [ ] Documentar lecciones aprendidas
-- [ ] Ajustar alertas si es necesario
-- [ ] Compartir insights con el equipo
-- [ ] Actualizar forecasting del siguiente mes
+* [ ] Revisar cumplimiento de objetivos mensuales
+* [ ] Documentar lecciones aprendidas
+* [ ] Ajustar alertas si es necesario
+* [ ] Compartir insights con el equipo
+* [ ] Actualizar forecasting del siguiente mes
+
+---
+
+## 5.18. Simulación de Escenarios (Analítica "What-If")
+
+El CMI-DAC permite realizar simulaciones para prever el impacto de decisiones antes de ejecutarlas.
+
+### 📉 Escenario A: Caída de Mercado (Recesión)
+
+**Pregunta**: *¿Qué pasa si el volumen de leads baja un 20%?*
+
+1. Use el parámetro de simulación en la pestaña "Proyecciones".
+2. Ajuste el slider a -20%.
+3. Observe el impacto en el flujo de caja (Cash Flow) y el punto de equilibrio.
+4. **Acción**: Identificar qué gastos fijos pueden reducirse preventivamente.
+
+### 💰 Escenario B: Inversión en Talento (Nueva Contratación)
+
+**Pregunta**: *¿Cuánto tarda un nuevo agente en ser rentable?*
+
+1. Filtre por la "Cohorte" de agentes contratados en el último año.
+2. Observe la curva de GCI acumulado vs. Coste (Sueldo + Marketing).
+3. **Dato Típico**: Un agente DAC suele alcanzar su break-even al 4º mes.
+4. **Acción**: Asegurar reservas de liquidez para los primeros 4 meses de cada nueva contratación.
+
+### 🏷️ Escenario C: Estrategia de Precio Ágil
+
+**Pregunta**: *¿Debemos bajar el precio de este inmueble hoy o esperar?*
+
+1. Compare el DOM del inmueble con la media de su zona exacta.
+2. Si `DOM_Inmueble > 1.5 * Media_Zona`, la probabilidad de venta cae un 40% cada semana adicional.
+3. **Acción**: Aplicar ajuste de precio proactivo para recuperar el impulso inicial del mercado.

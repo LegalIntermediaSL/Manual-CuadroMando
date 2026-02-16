@@ -387,7 +387,40 @@ graph TD
 
 ---
 
-## 4.5. Relaciones e Interdependencias entre KPIs
+## 4.5. 🌍 Nuevos Indicadores de Vanguardia (Tendencia 2026)
+
+Para mantenerse en la frontera de la innovación, el CMI-DAC incorpora métricas avanzadas que reflejan la realidad del mercado actual.
+
+### 21. Retorno de Inversión por Portal (ROI-P)
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Código** | `FIN-06-ROI-P` |
+| **Definición Técnica** | Beneficio neto generado por cada euro invertido en portales específicos (Idealista, Fotocasa, Habitaclia, etc.). |
+| **Importancia** | Permite optimizar el presupuesto de marketing eliminando portales que traen "volumen" de leads pero no cierres. |
+| **Fórmula** | `(GCI generado por Portal X) / Inversión en Portal X` |
+
+### 22. Índice de Sostenibilidad de Cartera (ESG-Score)
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Código** | `PRO-06-ESG` |
+| **Definición Técnica** | % de la cartera de inmuebles que cuentan con Certificado Energético clase A, B o C, o que incorporan tecnologías sostenibles. |
+| **Importancia** | Los inversores institucionales y los compradores jóvenes priorizan activos eficientes. Una cartera "verde" tiene un DOM menor. |
+| **Fórmula** | `(Inmuebles Cat A/B/C) / Total Inmuebles` |
+
+### 23. Valor de Vida del Cliente (LTV - Lifetime Value)
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Código** | `CLI-06-LTV` |
+| **Definición Técnica** | Ingresos totales que se estima generará un cliente a través de múltiples operaciones (compra+venta+alquiler) y referencias exitosas. |
+| **Importancia** | Cambia el enfoque de "cerrar una venta" a "gestionar un cliente de por vida". |
+| **Fórmula** | `(Media GCI por operación) * (Media de operaciones/cliente)` |
+
+---
+
+## 4.6. Relaciones e Interdependencias entre KPIs
 
 Los KPIs no existen en silos. Entender sus relaciones causa-efecto es fundamental para la toma de decisiones estratégicas.
 
@@ -457,20 +490,24 @@ Baja Impacto │ 🥱 LOW PRIORITY      │ ⚠️ MONEY PITS
 ### 📊 Estrategia Recomendada por Cuadrante
 
 **🎯 Quick Wins** (Ganancias Rápidas):
+
 * Enfoque: Tácticas de corto plazo
 * Ejemplo: Lanzar campaña de captación con incentivos
 * ROI: Alto e inmediato
 
 **🏔️ Big Bets** (Apuestas Grandes):
+
 * Enfoque: Estrategia de largo plazo
 * Ejemplo: Transformar cultura de servicio para mejorar NPS
 * ROI: Muy alto pero diferido (6-12 meses)
 
 **🥱 Low Priority** (Baja Prioridad):
+
 * Enfoque: Mantener sin inversión adicional
 * Acción: Monitorizar pasivamente
 
 **⚠️ Money Pits** (Trampas de Dinero):
+
 * Enfoque: No invertir recursos ahora
 * Nota: Pueden volverse importantes en otras fases
 
@@ -516,6 +553,7 @@ Baja Impacto │ 🥱 LOW PRIORITY      │ ⚠️ MONEY PITS
 **Diagnóstico**: María está quemada. Alto riesgo de fuga.
 
 **Acción**:
+
 * Reunión 1-on-1 urgente con RRHH
 * Redistribuir carga de trabajo
 * Ofrecer días de descanso compensatorios
@@ -526,6 +564,7 @@ Baja Impacto │ 🥱 LOW PRIORITY      │ ⚠️ MONEY PITS
 ### 📖 Caso 3: Optimización de Marketing
 
 **Situación**: Presupuesto de marketing €10,000/mes distribuido:
+
 * Idealista: €5,000
 * Facebook Ads: €3,000
 * Google Ads: €2,000
@@ -559,6 +598,7 @@ Nueva distribución:
 **Problema**: Celebrar KPIs que "suenan bien" pero no impactan en el negocio.
 
 **Ejemplo**:
+
 * ❌ "Tenemos 10,000 seguidores en Instagram"
 * ✅ "Instagram nos generó 5 ventas (€25,000 GCI) este mes"
 
@@ -571,6 +611,7 @@ Nueva distribución:
 **Problema**: Asumir que porque dos cosas ocurren juntas, una causa la otra.
 
 **Ejemplo**:
+
 * Observación: "Los meses con más lluvia tenemos menos ventas"
 * Conclusión errónea: "La lluvia causa menos ventas"
 * Realidad: "Los meses lluviosos (otoño) son históricamente bajos en el sector"
@@ -584,6 +625,7 @@ Nueva distribución:
 **Problema**: Comparar periodos no equivalentes.
 
 **Ejemplo**:
+
 * ❌ Comparar GCI de Enero con GCI de Julio (estacionalidad)
 * ✅ Comparar GCI de Enero 2026 con Enero 2025 (YoY)
 
@@ -596,6 +638,7 @@ Nueva distribución:
 **Problema**: Optimizar solo para que todo esté "verde" sin cuestionar los umbrales.
 
 **Ejemplo**:
+
 * Umbral de DOM: <90 días = Verde
 * Realidad de mercado: Competencia está en 45 días
 * Resultado: Estamos "en verde" pero perdiendo mercado
@@ -609,11 +652,13 @@ Nueva distribución:
 **Problema**: Pasar tanto tiempo analizando datos que no queda tiempo para actuar.
 
 **Síntomas**:
+
 * Reuniones de 3 horas revisando todos los KPIs
 * Crear nuevos KPIs cada semana
 * Generar informes que nadie lee
 
 **Solución**: Regla del 80/20
+
 * El 80% del valor viene del 20% de los KPIs
 * Enfocarse en los 5 KPIs estratégicos principales
 * Límite de 30 min por reunión de revisión

@@ -453,15 +453,38 @@ https://app.powerbi.com/groups/[workspace-id]/reports/[report-id]
 
 ---
 
-## 3.14. Consultas en Lenguaje Natural (Q&A)
-
-El CMI permite "preguntar" a los datos en lenguaje humano (ej: "¿Cuál fue el agente con más cierres en Junio?").
-
 ![Preguntas y Respuestas](../../graficos/powerbi_qa.png)
+
+### 🤖 IA y Narrativa Inteligente (Smart Narratives)
+
+El CMI-DAC incluye un componente de **Narrativa Inteligente** que utiliza procesamiento de lenguaje natural para explicar qué está pasando en los gráficos.
+
+* **Resumen Automático**: En la parte superior de cada página, un cuadro de texto generado por IA resume los hallazgos clave (ej: *"Este mes las ventas han subido un 12%, impulsadas principalmente por la oficina Norte"*).
+* **Análisis de Desviaciones**: Si un valor se sale de lo normal, la IA sugiere posibles causas basadas en los datos correlacionados.
 
 ---
 
-## 3.15. Resolución de Problemas de Visualización
+## 3.15. Optimización Mobile: "El CMI en tu Bolsillo"
+
+El diseño del CMI-DAC sigue una filosofía **Mobile-First**. Esto implica:
+
+1. **Layout Responsivo**: Los gráficos se reordenan verticalmente en pantallas estrechas para evitar el scroll horizontal.
+2. **Botones Amigables (Fat-Finger Friendly)**: Los filtros y selectores tienen un tamaño mínimo de 44x44px para facilitar el uso táctil.
+3. **Carga Selectiva**: En conexiones móviles, el sistema prioriza los KPIs numéricos y carga los mapas pesados en segundo plano.
+
+---
+
+## 3.16. Accesibilidad y Estándares de Diseño
+
+Nos tomamos en serio la inclusión. El dashboard cumple con:
+
+* **Contraste de Color**: Paletas validadas para usuarios con daltonismo (Protanopia/Deuteranopia).
+* **Texto Alternativo**: Todos los elementos visuales disponen de `alt-text` para lectores de pantalla.
+* **Jerarquía Visual**: Uso de la ley de Fitts y el patrón en "F" para colocar la información crítica donde el ojo humano mira primero (esquina superior izquierda).
+
+---
+
+## 3.17. Resolución de Problemas de Visualización
 
 ### 📊 "El gráfico muestra (Blank) o valores vacíos"
 

@@ -37,6 +37,7 @@ Es la tabla principal que registra cada movimiento de venta o alquiler.
 | `id_agente_captador` | INT (FK) | ID del agente que consiguió la captación. |
 | `id_agente_cierre` | INT (FK) | ID del agente que cerró la operación. |
 | `fuente_lead` | VARCHAR | Origen del cliente (Idealista, Web, Referido). |
+| `id_portal` | VARCHAR (FK) | ID del portal donde se originó el lead (ROI-P Tracking). |
 | `en_exclusiva` | BOOLEAN | Indica si la gestión fue exclusiva (TRUE/FALSE). |
 
 ---
@@ -56,6 +57,7 @@ Base de datos de Clientes y Leads.
 | `email` | VARCHAR | Correo electrónico. |
 | `direccion` | TEXT | Dirección completa. |
 | `origen` | VARCHAR | Fuente de donde provino el contacto. |
+| `lead_score` | INT | Puntuación IA de probabilidad de cierre (0-100). |
 | `fecha_creacion` | TIMESTAMP | Fecha de alta en el sistema. |
 
 ---
@@ -88,6 +90,8 @@ Inventario de propiedades gestionadas.
 | `provincia` | VARCHAR | Provincia. |
 | `superficie_m2` | NUMERIC | Tamaño del inmueble. |
 | `precio_eur` | NUMERIC | Último precio de salida conocido. |
+| `certificado_energetico`| CHAR(1) | Letra de eficiencia (A-G). |
+| `esg_score` | INT | Puntuación de sostenibilidad (0-100). |
 
 ---
 
