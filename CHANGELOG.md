@@ -3,6 +3,12 @@
 Todas las modificaciones notables en este proyecto serán documentadas en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2026-02-18
+
+### Changed
+
+- **Validación de Medidas**: Finalización de la fase de revisión de KPIs y fórmulas DAX, confirmando la precisión de los datos y la resolución de incidencias previas en la carga de fechas.
+
 ## [0.5.0] - 2026-02-16
 
 ### Added

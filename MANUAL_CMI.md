@@ -1,7 +1,7 @@
 # Manual del Proyecto Cuadro de Mando Integral (CMI-DAC)
 
-> 📊 **Manual Completo v2.5** - Documentación exhaustiva del Cuadro de Mando Integral para División de Agentes Consultores S.L.
-> Última actualización: Febrero 2026
+> 📊 **Manual Completo v2.6** - Documentación exhaustiva del Cuadro de Mando Integral para División de Agentes Consultores S.L.
+> Última actualización: 18 de Febrero de 2026
 
 ---
 
@@ -273,6 +273,7 @@ El repositorio incluye scripts Python para ETL, mantenimiento y verificación de
 
 | Versión | Fecha | Cambios Principales |
 |---------|-------|---------------------|
+| **2.6** | Feb 2026 | ✅ Validación final de KPIs y medidas DAX |
 | **2.5** | Feb 2026 | ✅ Ampliación masiva: 10 secciones completas, +150 páginas de contenido |
 | **2.2** | Dic 2025 | Mejoras en secciones 4 y 5, casos prácticos ampliados |
 | **2.0** | Sep 2025 | Rediseño completo de estructura |
@@ -348,5 +349,5 @@ Este manual no es solo documentación técnica. Es una guía para construir una 
 
 ---
 
-*Última actualización: 15 de febrero de 2026*
-*Manual CMI-DAC v2.5 - División de Agentes Consultores S.L.*
+*Última actualización: 18 de febrero de 2026*
+*Manual CMI-DAC v2.6 - División de Agentes Consultores S.L.*

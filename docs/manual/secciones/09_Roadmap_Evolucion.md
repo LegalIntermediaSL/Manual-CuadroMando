@@ -80,6 +80,7 @@ graph LR
 | Feature | Descripción | Prioridad | Estado |
 |---------|-------------|-----------|--------|
 | **Forecasting Automático** | Predicción de GCI trimestral basada en IA | 🔴 Alta | En desarrollo |
+| **Paneles de Presentaciones** | Reporting dinámico y exportable para reuniones | 🔴 Alta | Diseño |
 | **Detección de Anomalías** | Alertas automáticas cuando KPI se desvía >20% | 🔴 Alta | Planificado |
 | **Recomendaciones Inteligentes** | "El sistema sugiere ajustar precio de inmueble X" | 🟡 Media | Diseño |
 | **Análisis de Sentimiento** | Procesar reviews de clientes con NLP | 🟢 Baja | Backlog |
